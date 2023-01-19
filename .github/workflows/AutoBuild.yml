@@ -1,8 +1,8 @@
-name: Build-Windows
+name: AutoBuild
 
 on:
   push:
-    branches: [ "build", "main" ]
+    branches: [ "master"]
 
 jobs:
 
