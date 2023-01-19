@@ -25,8 +25,6 @@ using WonderLab.Modules.Styles;
 using WonderLab.Modules.Toolkits;
 using WonderLab.ViewModels;
 using WonderLab.Views;
-using static WonderLab.ViewModels.OtherViewModel;
-using static WonderLab.ByDdggdd135.utils.StaticVar;
 using Brushes = Avalonia.Media.Brushes;
 using Color = Avalonia.Media.Color;
 using FluentAvalonia.UI.Media.Animation;
@@ -163,33 +161,8 @@ namespace WonderLab
 
         public static void Button_Click(object? sender, RoutedEventArgs e)
         {
-            CanUpdata = false;
-            var res = Updata();
-            var button = new HyperlinkButton()
-            {
-                Content = "转至 祝福终端>任务中心"
-            };
-            button.Click += Button_Click1;
-            MainWindow.ShowInfoBarAsync("提示：", $"开始下载更新  更新内容:\n {res.body} \n\n推送者{res.author.login} \n 可前往任务中心查看进度", InfoBarSeverity.Informational, 8000, button);
-            string save = @"updata.zip";
-            if (Directory.Exists("updata-cache"))
-            {
-                File.Delete(Path.Combine("updata-cache", save));
-            }
-            string url = null;
-            foreach (var asset in res.assets)
-            {
-                if (asset.name == "Results.zip")
-                {
-                    url = asset.browser_download_url;
-                }
-            }
-            HttpDownloadRequest httpDownload = new HttpDownloadRequest();
-            httpDownload.Url = url;
-            httpDownload.FileName = save;
-            httpDownload.Directory = new DirectoryInfo("updata-cache");
-            DownItemView downItemView = new DownItemView(httpDownload, $"更新  {res.name} 下载", new AfterDo(After_Do));
-            TaskView.Add(downItemView);
+            //CanUpdata = false;
+            //var res = Updata();
         }
 
         private static void After_Do()
@@ -271,7 +244,7 @@ namespace WonderLab
                     width = 400;
                 }
             }
-            AutoUpdata();
+            //AutoUpdata();
         }
 
         private void OnRequestedThemeChanged(FluentAvaloniaTheme sender, RequestedThemeChangedEventArgs args)

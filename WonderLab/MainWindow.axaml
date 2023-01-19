@@ -12,6 +12,7 @@
 		Background="Transparent"
 		TransparencyLevelHint="AcrylicBlur"
 		ExtendClientAreaToDecorationsHint="True"
+		ExtendClientAreaChromeHints="NoChrome"
 		MinWidth="500"		
 		MinHeight="300"
 		Icon="resm:WonderLab.Resources.Icon.ico"

@@ -10,7 +10,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace WonderLab.ByDdggdd135.utils
+namespace WonderLab.Modules.Toolkits
 {
     public static class JavaToolkit
     {
@@ -64,13 +64,13 @@ namespace WonderLab.ByDdggdd135.utils
             string[] array = text.Split(".");
             if (array.Length != 0)
             {
-                num = ((int.Parse(array[0]) == 1) ? new int?(int.Parse(array[1])) : new int?(int.Parse(array[0])));
+                num = int.Parse(array[0]) == 1 ? new int?(int.Parse(array[1])) : new int?(int.Parse(array[0]));
             }
 
             return new JavaInfo
             {
                 Is64Bit = is64Bit,
-                JavaDirectoryPath = (javaDirectorypath.EndsWith('\\') ? javaDirectorypath : (javaDirectorypath + "\\")),
+                JavaDirectoryPath = javaDirectorypath.EndsWith('\\') ? javaDirectorypath : javaDirectorypath + "\\",
                 JavaSlugVersion = Convert.ToInt32(num),
                 JavaVersion = text,
                 JavaPath = Path.Combine(javaDirectorypath, "javaw.exe")
@@ -117,7 +117,7 @@ namespace WonderLab.ByDdggdd135.utils
                     {
                         if (!Info.Attributes.HasFlag(FileAttributes.ReparsePoint))
                         {
-                            Info = ((Info is FileInfo) ? ((FileInfo)Info).Directory : ((DirectoryInfo)Info).Parent);
+                            Info = Info is FileInfo ? ((FileInfo)Info).Directory : ((DirectoryInfo)Info).Parent;
                         }
                     }
                     while (Info != null);
@@ -143,7 +143,7 @@ namespace WonderLab.ByDdggdd135.utils
                     JavaPreList = JavaWithoutInherit;
                 }
 
-                JavaPreList.Sort((string x, string s) => x.CompareTo(s));
+                JavaPreList.Sort((x, s) => x.CompareTo(s));
                 foreach (string i in JavaPreList)
                 {
                     JavaInfo? res = GetJavaInfo(i);

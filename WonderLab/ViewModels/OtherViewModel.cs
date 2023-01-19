@@ -14,7 +14,6 @@ using WonderLab.Views;
 using Natsurainko.Toolkits.Network.Model;
 using FluentAvalonia.UI.Controls;
 using FluentAvalonia.UI.Media.Animation;
-using static WonderLab.ByDdggdd135.utils.StaticVar;
 
 namespace WonderLab.ViewModels
 {
@@ -35,35 +34,7 @@ namespace WonderLab.ViewModels
         }
         public async Task Check()
         {
-            var res = Updata();
-            if (ButtonContent == "检查更新" && CanUpdata)
-            {
-                MainWindow.ShowInfoBarAsync("提示：", "开始检查更新");
-                if (res != null)
-                {
-                    if (res.name != MainWindow.GetVersion())
-                    {
-                        MainWindow.ShowInfoBarAsync("提示：", $"有可用更新，版本号  {res.name}", FluentAvalonia.UI.Controls.InfoBarSeverity.Success);
-                        ButtonContent = "立即更新";
-                        return;
-                    }
-                    else
-                    {
-                        MainWindow.ShowInfoBarAsync("提示：", "检查更新完成，无可用更新！", FluentAvalonia.UI.Controls.InfoBarSeverity.Success);
-                        return;
-                    }
-                }
-                else
-                {
-                    MainWindow.ShowInfoBarAsync("错误：", "检查更新出错", FluentAvalonia.UI.Controls.InfoBarSeverity.Error);
-                }
-            }
-            else if(ButtonContent == "立即更新" && CanUpdata)
-            {
-                DownloadUpdata(res);
-                ButtonContent = "正在更新";
-                CanUpdata = false;
-            }
+
         }
         public void DownloadUpdata(Release res)
         {
@@ -92,8 +63,6 @@ namespace WonderLab.ViewModels
         }
         public void After_do()
         {
-            ButtonContent = "等待重启启动器";
-            File.Create(Path.Combine("updata-cache", "UpdataNextTime")).Close();
         }
     }
 
