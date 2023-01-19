@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WonderLabX", "WonderLab\WonderLabX.csproj", "{3EFFC1F0-74D5-45DE-9526-B350AAF3A08B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControlX", "ControlX\ControlX.csproj", "{1CA15489-2AEE-4671-87D8-312B09E634B3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PluginLoader", "PluginLoader\PluginLoader.csproj", "{3D2E6D2D-8D65-4205-B225-8CC01AD7E546}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GithubLib", "GithubLib\GithubLib.csproj", "{C1CA9E2A-8D4E-4D0F-973A-4873E6D68554}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FFFDD92E-8874-460F-A2C6-26162B6B500D}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Updata", "Updata\Updata.csproj", "{DAB27314-C3EC-4BB2-AB2C-B329F8878210}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EFFC1F0-74D5-45DE-9526-B350AAF3A08B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EFFC1F0-74D5-45DE-9526-B350AAF3A08B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EFFC1F0-74D5-45DE-9526-B350AAF3A08B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EFFC1F0-74D5-45DE-9526-B350AAF3A08B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CA15489-2AEE-4671-87D8-312B09E634B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CA15489-2AEE-4671-87D8-312B09E634B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CA15489-2AEE-4671-87D8-312B09E634B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CA15489-2AEE-4671-87D8-312B09E634B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D2E6D2D-8D65-4205-B225-8CC01AD7E546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D2E6D2D-8D65-4205-B225-8CC01AD7E546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D2E6D2D-8D65-4205-B225-8CC01AD7E546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D2E6D2D-8D65-4205-B225-8CC01AD7E546}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1CA9E2A-8D4E-4D0F-973A-4873E6D68554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1CA9E2A-8D4E-4D0F-973A-4873E6D68554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1CA9E2A-8D4E-4D0F-973A-4873E6D68554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1CA9E2A-8D4E-4D0F-973A-4873E6D68554}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAB27314-C3EC-4BB2-AB2C-B329F8878210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAB27314-C3EC-4BB2-AB2C-B329F8878210}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAB27314-C3EC-4BB2-AB2C-B329F8878210}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAB27314-C3EC-4BB2-AB2C-B329F8878210}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EFE286E8-D6F0-4FF1-8B87-2FCCB85FB61E}
+	EndGlobalSection
+EndGlobal
