@@ -65,8 +65,7 @@ namespace WonderLab.ViewModels
         {
             string version = "";
             Enabled = false;
-            //ConsoleWindow window = new();
-            //window.Show();return;
+
             #region 检查游戏核心
 
             try
