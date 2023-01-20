@@ -1,0 +1,52 @@
+name: 建议反馈
+description: 反馈你的想法
+labels:
+  - "🌐 建议"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你使用 WonderLab 问题反馈系统！
+        
+        如果此建议反馈不符合模板，将会被管理员无条件关闭。
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: 建议描述
+      description: 在此详细描述你的想法
+    validations:
+      required: true
+
+    validations:
+      required: true
+
+  - type: dropdown
+    id: server-platform-type
+    attributes:
+      label: 操作系统版本
+      description: |
+        选择你正在使用的操作系统
+      options:
+        - Windows
+        - Linux
+        - Mac
+    validations:
+      required: true
+
+  - type: textarea
+    id: slimefun-version
+    validations:
+      required: true
+    attributes:
+      label: WonderLab版本
+      description: |
+        **"最新版" 不是版本号，请填写一个确切的版本号！**
+      #如果你不太确定，可以截图 "" 的输出内容并截图，记得截全。
+      placeholder: '1.0.1.0'
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 补充信息
+      description: 如有必要，你可以在下文继续添加其他信息
