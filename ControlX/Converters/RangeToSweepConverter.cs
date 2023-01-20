@@ -34,4 +34,3 @@ namespace Material.Styles.Converters
         }
     }
 }
-}

@@ -32,4 +32,3 @@ namespace WonderLab.Views.Converters
             throw new NotImplementedException();
     }
 }
-}

@@ -7,6 +7,12 @@
     <TrimMode>copyused</TrimMode>
     <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>CS0693;CS8602;CS8670;CS8618;CS8762</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>CS0693;CS8602;CS8670;CS8618;CS8762</NoWarn>
+  </PropertyGroup>
   <ItemGroup>
     <None Remove=".gitignore" />
     <None Remove="ProgressBar.xaml" />

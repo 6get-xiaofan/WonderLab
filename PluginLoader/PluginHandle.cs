@@ -25,4 +25,3 @@ namespace PluginLoader
         public string Version { get; }
     }
 }
-}

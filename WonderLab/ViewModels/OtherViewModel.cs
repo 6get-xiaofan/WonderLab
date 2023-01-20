@@ -58,4 +58,3 @@ namespace WonderLab.ViewModels
         public string _ButtonContent = "检查更新";
     }
 }
-}

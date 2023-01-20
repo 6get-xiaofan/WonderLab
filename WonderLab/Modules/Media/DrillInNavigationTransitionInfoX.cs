@@ -54,4 +54,3 @@ namespace WonderLab.Modules.Media
         }
     }
 }
-}

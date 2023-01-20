@@ -15,4 +15,3 @@ namespace WonderLab.Modules.Models
         [JsonProperty("MCBBSId")] public int McbbsId { get; set; }
     }
 }
-}

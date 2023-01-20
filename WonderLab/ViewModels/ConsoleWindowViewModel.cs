@@ -62,4 +62,3 @@ namespace WonderLab.ViewModels
         public List<LogModels> _Logs = new();
     }
 }
-}

@@ -26,4 +26,3 @@ namespace PluginLoader
         public Type? MainType;
     }
 }
-}

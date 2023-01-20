@@ -274,4 +274,3 @@ namespace WonderLab.ViewModels
         }
     }
 }
-}

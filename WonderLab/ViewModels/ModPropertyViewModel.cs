@@ -91,4 +91,3 @@ namespace WonderLab.ViewModels
         public ModPackToolkit Toolkit;
     }
 }
-}

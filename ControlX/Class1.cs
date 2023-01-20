@@ -12,4 +12,3 @@ namespace ControlX
         public static double NaN = 0D / 0D;
     }
 }
-}

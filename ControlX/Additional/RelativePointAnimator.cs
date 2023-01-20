@@ -11,4 +11,3 @@ namespace ControlX.Styles.Additional {
         }
     }
 }
-}

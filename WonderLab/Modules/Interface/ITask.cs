@@ -9,4 +9,3 @@ namespace WonderLab.Modules.Interface
 {
     public interface ITask : IControl { }
 }
-}

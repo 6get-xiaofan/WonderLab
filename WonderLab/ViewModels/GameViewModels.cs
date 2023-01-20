@@ -376,4 +376,3 @@ namespace WonderLab.ViewModels
         public List<string> _FodlerList = App.Data.GameFooterList;
     }
 }
-}

@@ -371,4 +371,3 @@ namespace PluginLoader
         }
     }
 }
-}

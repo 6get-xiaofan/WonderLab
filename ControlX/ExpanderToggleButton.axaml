@@ -204,4 +204,3 @@
 		<Setter Property="RenderTransform" Value="rotate(180deg)" />
 	</Style>
 </Styles>
->

@@ -39,8 +39,8 @@
 								Background="{TemplateBinding Background}">
 							<Border.ContextMenu>
 								<ContextMenu>
-									<MenuItem Header="åˆ·æ–°"/>
-									<MenuItem Header="åˆ é™¤" Icon="Delete"/>
+									<MenuItem Header="Ë¢ÐÂ"/>
+									<MenuItem Header="É¾³ý" Icon="Delete"/>
 								</ContextMenu>
 							</Border.ContextMenu>
 						</Border>
@@ -77,4 +77,3 @@
 		</Setter>
 	</Style>
 </Styles>
->

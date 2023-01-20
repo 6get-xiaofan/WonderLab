@@ -44,4 +44,3 @@ namespace WonderLab.Modules.Base
         protected void RaisePropertyChanged(string propName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
     }
 }
-}

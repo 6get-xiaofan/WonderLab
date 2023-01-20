@@ -30,4 +30,3 @@ namespace WonderLab.Modules.Models
         public bool Enable { get; set; }
     }
 }
-}

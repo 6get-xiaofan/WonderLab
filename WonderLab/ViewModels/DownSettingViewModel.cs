@@ -63,4 +63,3 @@ namespace WonderLab.ViewModels
         public DownSettingViewModel() => SelectDownloadAPI = App.Data.SelectedAPI;
     }
 }
-}

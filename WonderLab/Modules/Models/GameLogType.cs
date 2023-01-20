@@ -13,4 +13,3 @@ namespace WonderLab.Modules.Models
         public string Log { get; set; }
     }
 }
-}

@@ -211,4 +211,3 @@ namespace WonderLab.ViewModels
         GameCore _SelectedGameCore = GameCoreToolkit.GetGameCore(App.Data.FooterPath, App.Data.SelectedGameCore);
     }
 }
-}

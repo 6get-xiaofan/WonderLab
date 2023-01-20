@@ -32,4 +32,3 @@ namespace WonderLab.Modules.Models
         public List<UserDataModels> UserList { get; set; } = new();
     }    
 }
-}

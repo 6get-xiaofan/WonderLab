@@ -180,4 +180,3 @@ namespace FluentAvaloniaSamples.Controls
         private Border _layoutRoot;
     }
 }
-}

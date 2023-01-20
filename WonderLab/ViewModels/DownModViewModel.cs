@@ -274,4 +274,3 @@ namespace WonderLab.ViewModels
         public Thickness _FilterMargin = new(45,0,45,0);
     }
 }
-}

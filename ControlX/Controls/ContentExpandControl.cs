@@ -79,4 +79,3 @@ namespace ControlX.Controls
         }
     }
 }
-}

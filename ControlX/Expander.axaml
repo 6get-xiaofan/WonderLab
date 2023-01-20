@@ -195,4 +195,4 @@
 	<Style Selector="Expander:right:expanded /template/ ToggleButton#PART_toggle /template/ Path#PART_ExpandIcon">
 		<Setter Property="RenderTransform" Value="rotate(90deg)"/>
 	</Style>
-</Styles>es>
+</Styles>

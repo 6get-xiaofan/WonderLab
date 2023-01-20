@@ -16,4 +16,3 @@ namespace WonderLab.Modules.Models
         public bool HasModLoader { get; set; }
     }
 }
-}

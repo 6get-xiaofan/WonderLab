@@ -277,4 +277,4 @@
 	<Style Selector="ToggleButton.passwordBoxRevealButton:checked /template/ ui|FontIcon#Glyph">
 		<Setter Property="Glyph" Value="&#xF3FC;" />
 	</Style>-->
-</Styles>es>
+</Styles>

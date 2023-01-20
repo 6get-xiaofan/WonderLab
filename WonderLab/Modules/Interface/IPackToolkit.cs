@@ -18,4 +18,3 @@ namespace WonderLab.Modules.Interface
         public Task<ImmutableArray<T>> MoveLoadAllAsync(IEnumerable<string> paths);
     }
 }
-}

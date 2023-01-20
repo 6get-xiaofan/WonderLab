@@ -43,4 +43,3 @@ namespace WonderLab.Modules.Styles
         }
     }
 }
-}

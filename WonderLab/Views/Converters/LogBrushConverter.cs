@@ -37,4 +37,3 @@ namespace WonderLab.Views.Converters
         }
     }
 }
-}

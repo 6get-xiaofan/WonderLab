@@ -14,4 +14,3 @@ namespace WonderLab.Modules.Enum
         Warning,
     }
 }
-}

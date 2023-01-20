@@ -90,4 +90,3 @@ namespace ControlX.Styles.Controls
         }
     }
 }
-}

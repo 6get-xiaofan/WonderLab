@@ -868,4 +868,3 @@ namespace ControlX.Styles.Controls
         }
     }
 }
-}

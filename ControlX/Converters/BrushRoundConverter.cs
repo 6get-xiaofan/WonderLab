@@ -25,4 +25,3 @@ namespace Material.Styles.Converters {
         }
     }
 }
-}

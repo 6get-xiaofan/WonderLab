@@ -8,4 +8,3 @@ namespace PluginLoader
         public bool IsCanceled { get; set; }
     }
 }
-}

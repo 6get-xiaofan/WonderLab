@@ -25,4 +25,3 @@ namespace WonderLab.Modules.Models
         public InfoBarSeverity Severity { get; set; } = InfoBarSeverity.Informational;
     }
 }
-}

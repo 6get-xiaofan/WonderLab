@@ -59,4 +59,3 @@ namespace Material.Styles.Converters
         }
     }
 }
-}

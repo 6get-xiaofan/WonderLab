@@ -16,4 +16,3 @@ namespace WonderLab.Modules.Enum
         Java
     }
 }
-}

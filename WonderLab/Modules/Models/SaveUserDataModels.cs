@@ -15,4 +15,3 @@ namespace WonderLab.Modules.Models
         public string UserToken { get; set; }
     }
 }
-}

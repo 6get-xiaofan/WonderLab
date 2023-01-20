@@ -61,4 +61,3 @@ namespace ControlX.Styles.Additional.Animations {
         }
     }
 }
-}

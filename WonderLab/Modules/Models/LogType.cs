@@ -17,4 +17,3 @@ namespace WonderLab.Modules.Models
         Error,
     }
 }
-}

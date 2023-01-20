@@ -6,9 +6,9 @@
         <Border Height="1000" Width="1000">
             <!-- Add Controls for Previewer Here -->
 			<WrapPanel Orientation="Horizontal">
-				<c:UserCard Classes="CardPro" FontFamily="Din Pro" HeardImageUri="https://crafatar.com/avatars/95883f77eef84bc6b7274f9c754a5a2c" Description="å¾®è½¯è´¦æˆ·" Header="Starcloudsea"/>
-				<c:UserCard Classes="CardPro" FontFamily="Din Pro" HeardImage="resm:WonderLab.Resources.fabric.png" Description="å¤–ç½®è´¦æˆ·" Header="WuXi_Xiao"/>
-				<c:UserCard Classes="CardPro" FontFamily="Din Pro" HeardImage="resm:WonderLab.Resources.normal.png" Description="ç¦»çº¿è´¦æˆ·" Header="Mr_49"/>
+				<c:UserCard Classes="CardPro" FontFamily="Din Pro" HeardImageUri="https://crafatar.com/avatars/95883f77eef84bc6b7274f9c754a5a2c" Description="Î¢ÈíÕË»§" Header="Starcloudsea"/>
+				<c:UserCard Classes="CardPro" FontFamily="Din Pro" HeardImage="resm:WonderLab.Resources.fabric.png" Description="ÍâÖÃÕË»§" Header="WuXi_Xiao"/>
+				<c:UserCard Classes="CardPro" FontFamily="Din Pro" HeardImage="resm:WonderLab.Resources.normal.png" Description="ÀëÏßÕË»§" Header="Mr_49"/>
 			</WrapPanel>
 		</Border>
     </Design.PreviewWith>
@@ -63,4 +63,3 @@
 		<Setter Property="Background" Value="{DynamicResource ControlFillColorSecondaryBrush}" />
 	</Style>
 </Styles>
->

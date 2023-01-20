@@ -23,4 +23,3 @@ namespace WonderLab.Modules.Models
         public int WindowWidth { get; set; } = 854;
     }
 }
-}

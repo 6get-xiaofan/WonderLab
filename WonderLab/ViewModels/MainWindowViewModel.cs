@@ -31,4 +31,3 @@ namespace WonderLab.ViewModels
         public void MiniWindowSize() => TitleBar.OnMinimize();            
     }
 }
-}

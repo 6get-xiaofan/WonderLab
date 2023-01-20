@@ -112,4 +112,3 @@ namespace WonderLab.ViewModels
         public bool _IsOlate = false;
     }
 }
-}

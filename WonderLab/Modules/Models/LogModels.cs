@@ -17,4 +17,3 @@ namespace WonderLab.Modules.Models
         public MinecraftLaunch.Modules.Enum.GameLogType LogLevel { get; set; }
     }
 }
-}
