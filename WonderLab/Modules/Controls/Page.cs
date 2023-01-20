@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using FluentAvalonia.UI.Controls;
 using FluentAvalonia.UI.Media.Animation;
 using System;
@@ -118,4 +118,5 @@ namespace WonderLab.Modules.Controls
         }
         #endregion
     }
+}
 }

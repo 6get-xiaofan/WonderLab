@@ -40,12 +40,12 @@ namespace WonderLab
         }
 
         /// <summary>
-        /// »î¶¯ºËĞÄ
+        /// æ´»åŠ¨æ ¸å¿ƒ
         /// </summary>
         public static GameCore CurrentGameCore { get; set; } = new();
         public static DataModels Data { get; set; } = new DataModels();
         /// <summary>
-        /// Ô¤Æô¶¯Êı¾İ¼ì²é
+        /// é¢„å¯åŠ¨æ•°æ®æ£€æŸ¥
         /// </summary>
         public async void CheckAsync()
         {
@@ -58,9 +58,9 @@ namespace WonderLab
                 {
                     //resm:WonderLab.Resources.WonderLab.Desktop.exe
                     var al = AvaloniaLocator.Current.GetService<IAssetLoader>();
-#pragma warning disable CS8602 // ½âÒıÓÃ¿ÉÄÜ³öÏÖ¿ÕÒıÓÃ¡£
+#pragma warning disable CS8602 // è§£å¼•ç”¨å¯èƒ½å‡ºç°ç©ºå¼•ç”¨ã€‚
                     using var s = al.Open(new Uri("resm:WonderLab.Resources.WonderLab.Desktop.exe"));
-#pragma warning restore CS8602 // ½âÒıÓÃ¿ÉÄÜ³öÏÖ¿ÕÒıÓÃ¡£
+#pragma warning restore CS8602 // è§£å¼•ç”¨å¯èƒ½å‡ºç°ç©ºå¼•ç”¨ã€‚
                     using FileStream fileStream = File.Create(PathConst.DownloaderPath);
                     byte[] bytes = new byte[HttpToolkit.BufferSize];
                     for (int num = await s.ReadAsync(bytes, 0, HttpToolkit.BufferSize); num > 0; num = await s.ReadAsync(bytes, 0, HttpToolkit.BufferSize))
@@ -108,9 +108,9 @@ namespace WonderLab
             var al = AvaloniaLocator.Current.GetService<IAssetLoader>();
             await Task.Run(() =>
             {
-#pragma warning disable CS8602 // ½âÒıÓÃ¿ÉÄÜ³öÏÖ¿ÕÒıÓÃ¡£
+#pragma warning disable CS8602 // è§£å¼•ç”¨å¯èƒ½å‡ºç°ç©ºå¼•ç”¨ã€‚
                 using var s = al.Open(new Uri("resm:WonderLab.Resources.ModData.json"));
-#pragma warning restore CS8602 // ½âÒıÓÃ¿ÉÄÜ³öÏÖ¿ÕÒıÓÃ¡£
+#pragma warning restore CS8602 // è§£å¼•ç”¨å¯èƒ½å‡ºç°ç©ºå¼•ç”¨ã€‚
                 StreamReader stream = new(s);
                 var model = JsonConvert.DeserializeObject<List<ModLangDataModel>>(stream.ReadToEnd());
                 if (model != null)
@@ -209,7 +209,7 @@ namespace WonderLab
             {
                 case "HarmonyOS Sans":
                 case FontFamily.DefaultFontFamilyName:
-                case "Î¢ÈíÑÅºÚ":  //font family name
+                case "å¾®è½¯é›…é»‘":  //font family name
                    skTypeface = SKTypeface.FromFamilyName(_defaultTypeface.FontFamily.Name); break;
                 case "Symbols":
                     skTypeface = SKTypeface.FromFamilyName("Symbols");

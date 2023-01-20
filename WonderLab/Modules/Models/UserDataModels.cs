@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
 using System;
@@ -36,4 +36,5 @@ namespace WonderLab.Modules.Models
             });
         }
     }
+}
 }

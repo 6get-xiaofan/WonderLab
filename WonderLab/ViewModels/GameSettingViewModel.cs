@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using FluentAvalonia.UI.Controls;
 using MinecraftLaunch.Modules.Toolkits;
 using System;
@@ -264,4 +264,5 @@ namespace WonderLab.ViewModels
                 JavaRemoveVisible = false;
         }
     }
+}
 }

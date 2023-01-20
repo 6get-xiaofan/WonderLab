@@ -1,4 +1,4 @@
-﻿using MinecraftLaunch.Modules.Installer;
+using MinecraftLaunch.Modules.Installer;
 using MinecraftLaunch.Modules.Models.Download;
 using System;
 using System.Collections.Generic;
@@ -62,4 +62,5 @@ namespace WonderLab.ViewModels
     {            
         public DownSettingViewModel() => SelectDownloadAPI = App.Data.SelectedAPI;
     }
+}
 }

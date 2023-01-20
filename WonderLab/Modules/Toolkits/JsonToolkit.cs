@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -166,4 +166,4 @@ namespace WonderLab.Modules.Toolkits
         }
     }
 }
-//C:\Users\w\Desktop\temp\.minecraft\versions\1.7.10 - OptiFine_HD_U_E7
+//C:\Users\w\Desktop\temp\.minecraft\versions\1.7.10 - OptiFine_HD_U_E7_E7

@@ -1,4 +1,4 @@
-﻿using FluentAvalonia.UI.Controls;
+using FluentAvalonia.UI.Controls;
 using MinecraftLaunch.Modules.Models.Download;
 using MinecraftLaunch.Modules.Toolkits;
 using System;
@@ -79,4 +79,5 @@ namespace WonderLab.Modules.Models
             }
         }
     }
+}
 }

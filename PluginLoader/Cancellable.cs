@@ -1,4 +1,4 @@
-﻿namespace PluginLoader
+namespace PluginLoader
 {
     public interface ICancellable
     {
@@ -7,4 +7,5 @@
         public void SetCancel(bool IsCancel);
         public bool IsCanceled { get; set; }
     }
+}
 }

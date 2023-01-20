@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using FluentAvalonia.UI.Controls;
 using System;
 using System.Collections.Generic;
@@ -24,4 +24,5 @@ namespace WonderLab.Modules.Models
 
         public InfoBarSeverity Severity { get; set; } = InfoBarSeverity.Informational;
     }
+}
 }

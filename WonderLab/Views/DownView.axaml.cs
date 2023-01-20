@@ -30,7 +30,7 @@ namespace WonderLab.Views
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             JavaInstallDialog.Hide();
-            MainWindow.ShowInfoBarAsync($"ĞÅÏ¢", "ÒÑÈ¡Ïû°²×° Java ÔËĞĞÊ±", severity: InfoBarSeverity.Informational);
+            MainWindow.ShowInfoBarAsync($"ä¿¡æ¯", "å·²å–æ¶ˆå®‰è£… Java è¿è¡Œæ—¶", severity: InfoBarSeverity.Informational);
         }
 
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)

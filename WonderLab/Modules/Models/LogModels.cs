@@ -1,4 +1,4 @@
-﻿using Avalonia.Media;
+using Avalonia.Media;
 using MinecraftLaunch.Modules.Enum;
 using System;
 using System.Collections.Generic;
@@ -16,4 +16,5 @@ namespace WonderLab.Modules.Models
         public string Log { get; set; }
         public MinecraftLaunch.Modules.Enum.GameLogType LogLevel { get; set; }
     }
+}
 }

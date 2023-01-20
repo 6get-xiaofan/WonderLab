@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using Avalonia.Remote.Protocol;
 using Microsoft.VisualBasic;
 using MinecraftLaunch.Modules.Installer;
@@ -273,4 +273,5 @@ namespace WonderLab.ViewModels
             return info;
         }
     }
+}
 }

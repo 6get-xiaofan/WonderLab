@@ -1,4 +1,4 @@
-﻿namespace PluginLoader
+namespace PluginLoader
 {
     /// <summary>
     /// 插件头
@@ -24,4 +24,5 @@
         public string? Description { get; }
         public string Version { get; }
     }
+}
 }

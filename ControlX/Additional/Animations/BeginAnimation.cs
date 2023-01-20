@@ -1,4 +1,4 @@
-﻿using System.Reactive.Subjects;
+using System.Reactive.Subjects;
 
 namespace ControlX.Styles.Additional.Animations {
     /// <summary>
@@ -16,4 +16,5 @@ namespace ControlX.Styles.Additional.Animations {
             match.OnNext(true);
         }
     }
+}
 }

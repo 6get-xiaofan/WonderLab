@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using FluentAvalonia.UI.Controls;
 using System;
 using System.Collections.Generic;
@@ -30,4 +30,5 @@ namespace WonderLab.ViewModels
         public void MaxWindowSize() => TitleBar.OnRestore();
         public void MiniWindowSize() => TitleBar.OnMinimize();            
     }
+}
 }

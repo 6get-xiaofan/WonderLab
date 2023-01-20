@@ -30,7 +30,7 @@ namespace WonderLab.Views
         {
             PropertyViewInitialize(this);
             ViewModel.Id = SelectGameCore.Id;
-            ViewModel.Type = SelectGameCore.Type;//SelectGameCore.HasModLoader is true ? $"{SelectGameCore.Type} ºÃ≥–◊‘ {SelectGameCore.Source}" : $"{SelectGameCore.Type} {SelectGameCore.Source}";
+            ViewModel.Type = SelectGameCore.Type;//SelectGameCore.HasModLoader is true ? $"{SelectGameCore.Type} ¬º√å¬≥√ê√ó√î {SelectGameCore.Source}" : $"{SelectGameCore.Type} {SelectGameCore.Source}";
             ViewModel.IsHasModLoader = SelectGameCore.HasModLoader;
         }
 

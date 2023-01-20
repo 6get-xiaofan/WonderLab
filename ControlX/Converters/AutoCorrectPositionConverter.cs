@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using Avalonia;
@@ -58,4 +58,5 @@ namespace Material.Styles.Converters
             throw new NotImplementedException();
         }
     }
+}
 }

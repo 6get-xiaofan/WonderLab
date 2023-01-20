@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using Avalonia.Threading;
 using FluentAvalonia.UI.Controls;
 using System;
@@ -34,4 +34,5 @@ namespace WonderLab.Modules.Base
         //    return await Task.Run<T>(async () => { return await Dispatcher.UIThread.InvokeAsync(action); });
         //}
     }
+}
 }

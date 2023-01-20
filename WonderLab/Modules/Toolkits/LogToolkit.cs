@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using MinecraftLaunch.Modules.Toolkits;
 using System;
 using System.Collections.Generic;
@@ -17,4 +17,5 @@ namespace WonderLab.Modules.Toolkits
             Debug.WriteLine($"[{TimeToolkit.GetCurrentTimeSlot()}] [{tyoe}] {raw}");
         }
     }
+}
 }

@@ -1,4 +1,4 @@
-﻿using Avalonia.Threading;
+using Avalonia.Threading;
 using FluentAvalonia.UI.Controls;
 using FluentAvalonia.UI.Media.Animation;
 using Microsoft.VisualBasic;
@@ -164,4 +164,5 @@ namespace WonderLab.ViewModels
             BlessingView.view.FrameView.Navigate(typeof(TaskView), null, new SlideNavigationTransitionInfo());
         }
     }
+}
 }

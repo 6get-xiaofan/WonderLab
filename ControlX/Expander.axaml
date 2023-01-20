@@ -1,4 +1,4 @@
-﻿<Styles xmlns="https://github.com/avaloniaui"
+<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:cx="using:ControlX.Controls">
 	<Style Selector="Expander" >
@@ -195,4 +195,4 @@
 	<Style Selector="Expander:right:expanded /template/ ToggleButton#PART_toggle /template/ Path#PART_ExpandIcon">
 		<Setter Property="RenderTransform" Value="rotate(90deg)"/>
 	</Style>
-</Styles>
+</Styles>es>

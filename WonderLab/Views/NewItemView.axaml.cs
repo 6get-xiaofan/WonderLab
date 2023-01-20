@@ -26,7 +26,7 @@ namespace WonderLab.Views
             link.Content = uri1;
             IsOk.Header = title;
             link.NavigateUri = new(uri1);
-            Date.Text= string.Format("{0}{1}","·¢²¼ÈÕÆÚ£º",data);
+            Date.Text= string.Format("{0}{1}","å‘å¸ƒæ—¥æœŸï¼š",data);
         }
 
         async void LoadImage(string uri)

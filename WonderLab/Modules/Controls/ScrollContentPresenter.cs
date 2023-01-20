@@ -1,4 +1,4 @@
-﻿using Avalonia;
+using Avalonia;
 using Avalonia.Controls.Presenters;
 using Avalonia.Controls.Primitives;
 using Avalonia.Input;
@@ -60,4 +60,5 @@ namespace WonderLab.Modules.Controls
             }
         }
     }
+}
 }

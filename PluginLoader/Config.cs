@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Diagnostics.CodeAnalysis;
 namespace PluginLoader
 {
@@ -184,4 +184,5 @@ namespace PluginLoader
             return ConfigManager.GetConfigDictionary().GetEnumerator();
         }
     }
+}
 }

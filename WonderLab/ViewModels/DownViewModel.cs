@@ -1,4 +1,4 @@
-﻿using Avalonia.Data.Converters;
+using Avalonia.Data.Converters;
 using Avalonia.Input;
 using Avalonia.Media;
 using System;
@@ -88,4 +88,4 @@ namespace WonderLab.ViewModels
         public bool ConfirmEnabled { get => _ConfirmEnabled; set => RaiseAndSetIfChanged(ref _ConfirmEnabled, value); }
     }
 }
-// set => RaiseAndSetIfChanged(ref _CurrentDownloadSource, value);
+// set => RaiseAndSetIfChanged(ref _CurrentDownloadSource, value);e);

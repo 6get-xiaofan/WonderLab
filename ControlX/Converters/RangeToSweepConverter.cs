@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using Avalonia.Data.Converters;
@@ -33,4 +33,5 @@ namespace Material.Styles.Converters
             return result * 360;
         }
     }
+}
 }

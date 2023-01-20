@@ -1,4 +1,4 @@
-﻿using Avalonia.Data.Converters;
+using Avalonia.Data.Converters;
 using Avalonia.Media;
 using MinecraftLaunch.Modules.Enum;
 using System;
@@ -36,4 +36,5 @@ namespace WonderLab.Views.Converters
             throw new NotImplementedException();
         }
     }
+}
 }

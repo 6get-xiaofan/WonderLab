@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reactive.Subjects;
 using System.Threading.Tasks;
 using Avalonia.Animation;
@@ -60,4 +60,5 @@ namespace ControlX.Styles.Additional.Animations {
             }
         }
     }
+}
 }

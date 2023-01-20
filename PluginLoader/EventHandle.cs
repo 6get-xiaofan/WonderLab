@@ -1,4 +1,4 @@
-﻿namespace PluginLoader
+namespace PluginLoader
 {
     [AttributeUsage(AttributeTargets.Method)]
     public class EventHandle : Attribute
@@ -9,4 +9,5 @@
             this.IgnoreCancelled = IgnoreCancelled;
         }
     }
+}
 }

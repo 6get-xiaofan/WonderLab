@@ -67,7 +67,7 @@ namespace WonderLab.Views
             if (App.Data.SelectedUser is not null && App.Data.SelectedUser.UserName.Equals(user.Name) && App.Data.SelectedUser.UserUuid.Equals(user.Uuid))
                 App.Data.SelectedUser = null;
 
-            MainWindow.ShowInfoBarAsync("³É¹¦:",$"ÕË»§ {user.Name} ÒÑ³É¹¦±»ÒÆ³ı£¡", InfoBarSeverity.Success);
+            MainWindow.ShowInfoBarAsync("æˆåŠŸ:",$"è´¦æˆ· {user.Name} å·²æˆåŠŸè¢«ç§»é™¤ï¼", InfoBarSeverity.Success);
         }
 
         private async void UserSettingOpenPointerPressed(object? sender, Avalonia.Input.PointerPressedEventArgs e)
@@ -86,14 +86,14 @@ namespace WonderLab.Views
 
         private void BorderImagePointerEnter(object? sender, Avalonia.Input.PointerEventArgs e)
         {
-            LogToolkit.WriteLine("Êó±êÒÆÈëÍ·Ïñ Border£¡");
+            LogToolkit.WriteLine("é¼ æ ‡ç§»å…¥å¤´åƒ Borderï¼");
             ZoomOutAnimation animation = new();
             animation.RunAsync((Border)sender);
         }
 
         private void BorderImagePointerLeave(object? sender, Avalonia.Input.PointerEventArgs e)
         {
-            LogToolkit.WriteLine("Êó±êÒÆ³öÍ·Ïñ Border£¡");
+            LogToolkit.WriteLine("é¼ æ ‡ç§»å‡ºå¤´åƒ Borderï¼");
             ZoomOutAnimation animation = new(true);
             animation.RunAsync((Border)sender);
         }

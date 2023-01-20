@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using Avalonia.Layout;
 using Avalonia;
 using System;
@@ -78,4 +78,5 @@ namespace ControlX.Controls
             return new Size(w, h);
         }
     }
+}
 }

@@ -1,4 +1,4 @@
-﻿namespace PluginLoader
+namespace PluginLoader
 {
     /// <summary>
     /// 插件基类
@@ -20,4 +20,5 @@
 
         }
     }
+}
 }

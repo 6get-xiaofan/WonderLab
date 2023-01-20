@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Globalization;
 using System.Text;
 using Avalonia;
@@ -117,4 +117,5 @@ namespace ControlX.Styles.Controls
             return StreamGeometry.Parse(result);
         }
     }
+}
 }

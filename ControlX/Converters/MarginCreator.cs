@@ -1,4 +1,4 @@
-﻿using Avalonia;
+using Avalonia;
 using Avalonia.Data.Converters;
 using System;
 using System.Collections.Generic;
@@ -29,4 +29,5 @@ namespace Material.Styles.Converters
 
         public static Thickness createMargin(double left = 0, double up = 0, double right = 0, double down = 0) => new Thickness(left, up, right, down);
     }
+}
 }

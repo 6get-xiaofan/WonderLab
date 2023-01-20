@@ -1,4 +1,4 @@
-﻿using Avalonia;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.Chrome;
 using Avalonia.Controls.Metadata;
@@ -174,4 +174,5 @@ namespace WonderLab.Modules.Controls
         private Path _RestoreButtonPath;
         private CompositeDisposable? _disposables;
     }
+}
 }

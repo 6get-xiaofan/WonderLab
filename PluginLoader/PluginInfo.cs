@@ -1,4 +1,4 @@
-﻿namespace PluginLoader
+namespace PluginLoader
 {
     /// <summary>
     /// 表示一个插件的信息
@@ -25,4 +25,5 @@
         public string Path;
         public Type? MainType;
     }
+}
 }

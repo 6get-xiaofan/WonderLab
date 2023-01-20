@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.IO;
@@ -17,4 +17,5 @@ namespace WonderLab.Modules.Interface
         public Task<ImmutableArray<T>> LoadAllAsync();
         public Task<ImmutableArray<T>> MoveLoadAllAsync(IEnumerable<string> paths);
     }
+}
 }

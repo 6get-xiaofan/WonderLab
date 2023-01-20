@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,4 +22,5 @@ namespace WonderLab.Modules.Models
         public int WindowHeight { get; set; } = 480;
         public int WindowWidth { get; set; } = 854;
     }
+}
 }

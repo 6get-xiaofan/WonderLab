@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,4 +14,5 @@ namespace WonderLab.Modules.Models
         [JsonProperty("MCModWikiId")] public int MCModId { get; set; }
         [JsonProperty("MCBBSId")] public int McbbsId { get; set; }
     }
+}
 }

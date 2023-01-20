@@ -1,4 +1,4 @@
-﻿using Avalonia.Data.Converters;
+using Avalonia.Data.Converters;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -70,4 +70,5 @@ namespace WonderLab.Views.Converters
             throw new NotImplementedException();
         }
     }
+}
 }

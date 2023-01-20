@@ -1,4 +1,4 @@
-﻿<Styles xmlns="https://github.com/avaloniaui"
+<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="using:FluentAvaloniaSamples.Controls"
         xmlns:ui="using:FluentAvalonia.UI.Controls">
@@ -190,3 +190,4 @@
         </Setter>
     </Style>
 </Styles>
+>

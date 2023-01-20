@@ -1,4 +1,4 @@
-﻿using Avalonia;
+using Avalonia;
 using Avalonia.Data.Converters;
 using System;
 using System.Collections.Generic;
@@ -93,4 +93,5 @@ namespace Material.Styles.Converters
             return result;
         }
     }
+}
 }

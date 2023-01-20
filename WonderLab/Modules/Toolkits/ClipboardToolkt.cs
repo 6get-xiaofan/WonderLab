@@ -1,4 +1,4 @@
-﻿using Avalonia.Input.Platform;
+using Avalonia.Input.Platform;
 using Avalonia;
 using System;
 using System.Collections.Generic;
@@ -24,4 +24,5 @@ namespace WonderLab.Modules.Toolkits
             await ((IClipboard)AvaloniaLocator.Current.GetRequiredService(typeof(IClipboard))).ClearAsync();
         }
     }
+}
 }

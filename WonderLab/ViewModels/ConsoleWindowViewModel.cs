@@ -1,4 +1,4 @@
-﻿using MinecraftLaunch.Modules.Models.Launch;
+using MinecraftLaunch.Modules.Models.Launch;
 using Natsurainko.FluentCore.Class.Model.Launch;
 using Natsurainko.FluentCore.Interface;
 using System;
@@ -61,4 +61,5 @@ namespace WonderLab.ViewModels
         public Dictionary<string, string> _Test = new();
         public List<LogModels> _Logs = new();
     }
+}
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,4 +29,5 @@ namespace WonderLab.Modules.Models
 
         public bool Enable { get; set; }
     }
+}
 }

@@ -1,4 +1,4 @@
-﻿using Avalonia.Platform;
+using Avalonia.Platform;
 using Avalonia;
 using System;
 using System.Collections.Generic;
@@ -35,7 +35,7 @@ namespace WonderLab.Modules.Base
                 BackgroundWorker worker = new();
                 worker.DoWork += (_, _) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
                 worker.RunWorkerAsync();
-                //Debug.WriteLine($"Value：{value}");
+                //Debug.WriteLine($"Valueï¼š{value}");
                 return true;
             }
             return false;
@@ -43,4 +43,5 @@ namespace WonderLab.Modules.Base
 
         protected void RaisePropertyChanged(string propName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
     }
+}
 }

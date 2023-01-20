@@ -1,4 +1,4 @@
-﻿using FluentAvalonia.UI.Controls;
+using FluentAvalonia.UI.Controls;
 using MinecaftOAuth;
 using MinecaftOAuth.Authenticator;
 using Natsurainko.FluentCore.Class.Model.Auth.Yggdrasil;
@@ -218,4 +218,5 @@ namespace WonderLab.ViewModels
         public UserModels _CurrentUser = new(App.Data.SelectedUser);
         //public string _PasswordBoxText = string.Empty;
     }
+}
 }

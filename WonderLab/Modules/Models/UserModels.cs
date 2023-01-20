@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using Avalonia.Media.Imaging;
 using FluentAvalonia.UI.Controls;
 using MinecaftOAuth;
@@ -144,4 +144,5 @@ namespace WonderLab.Modules.Models
             };
         }
     }
+}
 }

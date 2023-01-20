@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Input;
 using Avalonia;
 using Avalonia.Controls;
@@ -179,4 +179,5 @@ namespace FluentAvaloniaSamples.Controls
         private bool _isExpanded;
         private Border _layoutRoot;
     }
+}
 }

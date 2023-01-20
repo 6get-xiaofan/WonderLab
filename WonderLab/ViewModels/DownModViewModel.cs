@@ -1,4 +1,4 @@
-﻿using Avalonia;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Threading;
 using MinecraftLaunch.Modules.Enum;
@@ -273,4 +273,5 @@ namespace WonderLab.ViewModels
         public double _FilterHeight = 0;
         public Thickness _FilterMargin = new(45,0,45,0);
     }
+}
 }

@@ -1,4 +1,4 @@
-﻿using Avalonia.Media;
+using Avalonia.Media;
 using Avalonia.Platform;
 using Avalonia;
 using FluentAvalonia.Core.ApplicationModel;
@@ -42,4 +42,5 @@ namespace WonderLab.Modules.Styles
 
         }
     }
+}
 }

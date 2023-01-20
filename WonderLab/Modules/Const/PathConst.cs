@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -39,4 +39,5 @@ namespace WonderLab.Modules.Const
 
         public static string GetLogConfigsFolder(string root) => $"{GetAssetsFolder(root)}{X}log_configs";
     }
+}
 }

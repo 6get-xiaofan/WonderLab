@@ -1,4 +1,4 @@
-﻿using Avalonia.Data.Converters;
+using Avalonia.Data.Converters;
 using Natsurainko.FluentCore.Class.Model.Install;
 using System;
 using System.Collections.Generic;
@@ -35,4 +35,5 @@ namespace WonderLab.Views.Converters
             throw new NotImplementedException();
         }
     }
+}
 }

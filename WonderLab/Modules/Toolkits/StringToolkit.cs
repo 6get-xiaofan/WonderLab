@@ -1,4 +1,4 @@
-﻿using FluentAvalonia.UI.Controls;
+using FluentAvalonia.UI.Controls;
 using Newtonsoft.Json.Linq;
 using Splat;
 using System;
@@ -179,4 +179,5 @@ namespace WonderLab.Modules.Toolkits
         //    Task.Output = new DlCfProjectResult() { Projects = FileList, Index = RequestResult("pagination")("index"), RealCount = RequestResult("pagination")("totalCount") };
         //}
     }
+}
 }

@@ -1,6 +1,5 @@
 using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Controls.Notifications;
 using Avalonia.Interactivity;
 using Avalonia.Media;
 using Avalonia.Media.Immutable;
@@ -12,25 +11,20 @@ using GithubLib;
 using Natsurainko.Toolkits.Network.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
-using System.Threading;
 using System.Threading.Tasks;
 using WonderLab.Modules.Base;
 using WonderLab.Modules.Media;
 using WonderLab.Modules.Models;
-using WonderLab.Modules.Styles;
 using WonderLab.Modules.Toolkits;
 using WonderLab.ViewModels;
 using WonderLab.Views;
 using Brushes = Avalonia.Media.Brushes;
 using Color = Avalonia.Media.Color;
 using FluentAvalonia.UI.Media.Animation;
-using static WonderLab.ViewModels.OtherViewModel;
 using WonderLab.Modules.Controls;
-#pragma warning disable CS8618 // ÔÚÍË³ö¹¹Ôìº¯ÊıÊ±£¬²»¿ÉÎª null µÄ×Ö¶Î±ØĞë°üº¬·Ç null Öµ¡£Çë¿¼ÂÇÉùÃ÷Îª¿ÉÒÔÎª null¡£
+#pragma warning disable CS8618 // åœ¨é€€å‡ºæ„é€ å‡½æ•°æ—¶ï¼Œä¸å¯ä¸º null çš„å­—æ®µå¿…é¡»åŒ…å«é null å€¼ã€‚è¯·è€ƒè™‘å£°æ˜ä¸ºå¯ä»¥ä¸º nullã€‚
 namespace WonderLab
 {
     public partial class MainWindow : Window
@@ -41,7 +35,7 @@ namespace WonderLab
         {
             if (!IsWindows11)
             {
-#pragma warning disable CS8602 // ½âÒıÓÃ¿ÉÄÜ³öÏÖ¿ÕÒıÓÃ¡£
+#pragma warning disable CS8602 // è§£å¼•ç”¨å¯èƒ½å‡ºç°ç©ºå¼•ç”¨ã€‚
                 if (AvaloniaLocator.Current.GetService<FluentAvaloniaTheme>().RequestedTheme is "Dark")
                 {
                     AcrylicBorder.Material = new ExperimentalAcrylicMaterial()
@@ -62,7 +56,7 @@ namespace WonderLab
                         MaterialOpacity = 0.65,
                     };
                 }
-#pragma warning restore CS8602 // ½âÒıÓÃ¿ÉÄÜ³öÏÖ¿ÕÒıÓÃ¡£
+#pragma warning restore CS8602 // è§£å¼•ç”¨å¯èƒ½å‡ºç°ç©ºå¼•ç”¨ã€‚
             }
         }
 
@@ -153,14 +147,14 @@ namespace WonderLab
                         {
                             var button = new HyperlinkButton()
                             {
-                                Content = "µã»÷ÏÂÔØ",
+                                Content = "ç‚¹å‡»ä¸‹è½½",
                             };
                             button.Click += Button_Click;
-                            ShowInfoBarAsync("×Ô¶¯¸üĞÂ", "·¢ÏÖĞÂ°æ±¾" + release.name + "  µ±Ç°°æ±¾" + GetVersion() + "  ", InfoBarSeverity.Informational, 7000, button);
+                            ShowInfoBarAsync("è‡ªåŠ¨æ›´æ–°", "å‘ç°æ–°ç‰ˆæœ¬" + release.name + "  å½“å‰ç‰ˆæœ¬" + GetVersion() + "  ", InfoBarSeverity.Informational, 7000, button);
                         }
                         else
                         {
-                            ShowInfoBarAsync("×Ô¶¯¸üĞÂ", "·¢ÏÖĞÂ°æ±¾" + release.name + "  µ±Ç°°æ±¾" + GetVersion() + "  ", InfoBarSeverity.Informational, 7000);
+                            ShowInfoBarAsync("è‡ªåŠ¨æ›´æ–°", "å‘ç°æ–°ç‰ˆæœ¬" + release.name + "  å½“å‰ç‰ˆæœ¬" + GetVersion() + "  ", InfoBarSeverity.Informational, 7000);
                         }
                     }
 
@@ -185,10 +179,10 @@ namespace WonderLab
         {
             var button = new HyperlinkButton()
             {
-                Content = "×ªÖÁ ×£¸£ÖÕ¶Ë>ÈÎÎñÖĞĞÄ",
+                Content = "è½¬è‡³ ç¥ç¦ç»ˆç«¯>ä»»åŠ¡ä¸­å¿ƒ",
             };
             button.Click += (object? sender, RoutedEventArgs e) =>{ Page.NavigatedToTaskView(); };
-            MainWindow.ShowInfoBarAsync("ÌáÊ¾£º", $"¿ªÊ¼ÏÂÔØ¸üĞÂ  ¸üĞÂÄÚÈİ:\n {res.body} \n\nÍÆËÍÕß{res.author.login} \n ¿ÉÇ°ÍùÈÎÎñÖĞĞÄ²é¿´½ø¶È", InfoBarSeverity.Informational, 8000, button);
+            MainWindow.ShowInfoBarAsync("æç¤ºï¼š", $"å¼€å§‹ä¸‹è½½æ›´æ–°  æ›´æ–°å†…å®¹:\n {res.body} \n\næ¨é€è€…{res.author.login} \n å¯å‰å¾€ä»»åŠ¡ä¸­å¿ƒæŸ¥çœ‹è¿›åº¦", InfoBarSeverity.Informational, 8000, button);
             string save = @"updata.zip";
             if(Directory.Exists("updata-cache"))
             File.Delete(Path.Combine("updata-cache", save));
@@ -204,7 +198,7 @@ namespace WonderLab
             httpDownload.Url = url;
             httpDownload.FileName = save;
             httpDownload.Directory = new DirectoryInfo("updata-cache");
-            DownItemView downItemView = new DownItemView(httpDownload, $"¸üĞÂ  {res.name} ÏÂÔØ", new AfterDo(After_Do));
+            DownItemView downItemView = new DownItemView(httpDownload, $"æ›´æ–°  {res.name} ä¸‹è½½", new AfterDo(After_Do));
             TaskView.Add(downItemView);
         }
         public static Release? Updata()
@@ -216,7 +210,7 @@ namespace WonderLab
         private static void After_Do()
         {
             File.Create(Path.Combine("updata-cache", "UpdataNextTime")).Close();
-            MainWindow.ShowInfoBarAsync("ÌáÊ¾£º", $"¸üĞÂÏÂÔØÍê³É  ÖØÆôÆô¶¯Æ÷ÒÔÓ¦ÓÃ¸üĞÂ", InfoBarSeverity.Success, 20000);
+            MainWindow.ShowInfoBarAsync("æç¤ºï¼š", $"æ›´æ–°ä¸‹è½½å®Œæˆ  é‡å¯å¯åŠ¨å™¨ä»¥åº”ç”¨æ›´æ–°", InfoBarSeverity.Success, 20000);
         }
 
         public static void Button_Click1(object? sender, RoutedEventArgs e)
@@ -232,9 +226,9 @@ namespace WonderLab
             base.OnOpened(e);
 
             var thm = AvaloniaLocator.Current.GetService<FluentAvaloniaTheme>();
-#pragma warning disable CS8602 // ½âÒıÓÃ¿ÉÄÜ³öÏÖ¿ÕÒıÓÃ¡£
+#pragma warning disable CS8602 // è§£å¼•ç”¨å¯èƒ½å‡ºç°ç©ºå¼•ç”¨ã€‚
             thm.RequestedThemeChanged += OnRequestedThemeChanged;
-#pragma warning restore CS8602 // ½âÒıÓÃ¿ÉÄÜ³öÏÖ¿ÕÒıÓÃ¡£
+#pragma warning restore CS8602 // è§£å¼•ç”¨å¯èƒ½å‡ºç°ç©ºå¼•ç”¨ã€‚
 
             // Enable Mica on Windows 11
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
@@ -330,7 +324,7 @@ namespace WonderLab
         
         private void MainWindow_Deactivated(object? sender, EventArgs e)
         {
-#pragma warning disable CS8602 // ½âÒıÓÃ¿ÉÄÜ³öÏÖ¿ÕÒıÓÃ¡£
+#pragma warning disable CS8602 // è§£å¼•ç”¨å¯èƒ½å‡ºç°ç©ºå¼•ç”¨ã€‚
             AcrylicBorder.Material = new ExperimentalAcrylicMaterial()
             {
                 BackgroundSource = AcrylicBackgroundSource.Digger,
@@ -338,7 +332,7 @@ namespace WonderLab
                 TintOpacity = 1,
                 MaterialOpacity = 1,
             };
-#pragma warning restore CS8602 // ½âÒıÓÃ¿ÉÄÜ³öÏÖ¿ÕÒıÓÃ¡£
+#pragma warning restore CS8602 // è§£å¼•ç”¨å¯èƒ½å‡ºç°ç©ºå¼•ç”¨ã€‚
         }
 
         private void MainWindow_Activated(object? sender, EventArgs e)

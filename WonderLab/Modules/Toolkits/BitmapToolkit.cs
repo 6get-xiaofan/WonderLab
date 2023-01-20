@@ -1,4 +1,4 @@
-﻿using Avalonia;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.Shapes;
 using Avalonia.Media;
@@ -70,4 +70,5 @@ namespace WonderLab.Modules.Toolkits
                 return new Bitmap(s);
         }
     }
+}
 }

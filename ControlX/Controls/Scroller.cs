@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reactive.Linq;
 using Avalonia;
 using Avalonia.Controls;
@@ -234,9 +234,17 @@ namespace ControlX.Styles.Controls
         /// <summary>
         /// Initializes a new instance of the <see cref="Scroller"/> class.
         /// </summary>
+#pragma warning disable CS8618 // 在退出构造函数时，不可为 null 的字段必须包含非 null 值。请考虑声明为可以为 null。
+#pragma warning disable CS8618 // 在退出构造函数时，不可为 null 的字段必须包含非 null 值。请考虑声明为可以为 null。
+#pragma warning disable CS8618 // 在退出构造函数时，不可为 null 的字段必须包含非 null 值。请考虑声明为可以为 null。
         public Scroller()
+#pragma warning restore CS8618 // 在退出构造函数时，不可为 null 的字段必须包含非 null 值。请考虑声明为可以为 null。
+#pragma warning restore CS8618 // 在退出构造函数时，不可为 null 的字段必须包含非 null 值。请考虑声明为可以为 null。
+#pragma warning restore CS8618 // 在退出构造函数时，不可为 null 的字段必须包含非 null 值。请考虑声明为可以为 null。
         {
+#pragma warning disable CS8622 // 参数类型中引用类型的为 Null 性与目标委托不匹配(可能是由于为 Null 性特性)。
             LayoutUpdated += OnLayoutUpdated;
+#pragma warning restore CS8622 // 参数类型中引用类型的为 Null 性与目标委托不匹配(可能是由于为 Null 性特性)。
         }
 
         /// <summary>
@@ -690,14 +698,18 @@ namespace ControlX.Styles.Controls
         {
             if (_logicalScrollable is object)
             {
+#pragma warning disable CS8622 // 参数类型中引用类型的为 Null 性与目标委托不匹配(可能是由于为 Null 性特性)。
                 _logicalScrollable.ScrollInvalidated -= LogicalScrollInvalidated;
+#pragma warning restore CS8622 // 参数类型中引用类型的为 Null 性与目标委托不匹配(可能是由于为 Null 性特性)。
                 _logicalScrollable = null;
             }
 
             if (child is ILogicalScrollable logical)
             {
                 _logicalScrollable = logical;
+#pragma warning disable CS8622 // 参数类型中引用类型的为 Null 性与目标委托不匹配(可能是由于为 Null 性特性)。
                 logical.ScrollInvalidated += LogicalScrollInvalidated;
+#pragma warning restore CS8622 // 参数类型中引用类型的为 Null 性与目标委托不匹配(可能是由于为 Null 性特性)。
             }
 
             CalculatedPropertiesChanged();
@@ -855,4 +867,5 @@ namespace ControlX.Styles.Controls
             }
         }
     }
+}
 }

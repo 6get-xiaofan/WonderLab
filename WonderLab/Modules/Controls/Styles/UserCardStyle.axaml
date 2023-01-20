@@ -1,4 +1,4 @@
-﻿<Styles xmlns="https://github.com/avaloniaui"
+<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:ui="using:FluentAvalonia.UI.Controls"
 		xmlns:c="using:WonderLab.Modules.Cards">
@@ -63,3 +63,4 @@
 		<Setter Property="Background" Value="{DynamicResource ControlFillColorSecondaryBrush}" />
 	</Style>
 </Styles>
+>

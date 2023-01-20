@@ -37,7 +37,7 @@ namespace WonderLab.Views
             nullText.IsVisible = false;
         }
         /// <summary>
-        /// 添加任务方法
+        /// 娣诲姞浠诲姟鏂规硶
         /// </summary>
         /// <param name="view"></param>
         public static void Add(ITask view)
@@ -55,7 +55,7 @@ namespace WonderLab.Views
                 task.AddItem(view);
         }
         /// <summary>
-        /// 移除任务方法
+        /// 绉婚櫎浠诲姟鏂规硶
         /// </summary>
         /// <param name="page"></param>
         public static void Remove(Page page)

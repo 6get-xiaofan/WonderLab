@@ -1,4 +1,4 @@
-﻿using Avalonia;
+using Avalonia;
 using Avalonia.Animation;
 using Avalonia.Animation.Easings;
 using Avalonia.Media;
@@ -53,4 +53,5 @@ namespace WonderLab.Modules.Media
             (ctrl as IVisual).Opacity = 1;
         }
     }
+}
 }

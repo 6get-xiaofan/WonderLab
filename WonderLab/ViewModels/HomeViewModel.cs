@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls.Notifications;
+using Avalonia.Controls.Notifications;
 using FluentAvalonia.UI.Controls;
 using FluentAvalonia.UI.Media.Animation;
 using MinecraftLaunch.Modules.Models.Launch;
@@ -210,4 +210,5 @@ namespace WonderLab.ViewModels
         List<GameCore> _GameCores = new();
         GameCore _SelectedGameCore = GameCoreToolkit.GetGameCore(App.Data.FooterPath, App.Data.SelectedGameCore);
     }
+}
 }

@@ -1,4 +1,4 @@
-﻿namespace PluginLoader
+namespace PluginLoader
 {
     public class PluginUnLoadEvent : Event
     {
@@ -8,4 +8,5 @@
         {
         }
     }
+}
 }

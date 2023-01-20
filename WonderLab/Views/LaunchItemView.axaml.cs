@@ -58,7 +58,7 @@ namespace WonderLab.Views
                 LaunchAsync(version, userData);
             else
             {
-                MainWindow.ShowInfoBarAsync("´íÎó", "ÓÎÏ·×ÊÔ´ÎÄ¼ş²¹È«Ê§°Ü", InfoBarSeverity.Error);
+                MainWindow.ShowInfoBarAsync("é”™è¯¯", "æ¸¸æˆèµ„æºæ–‡ä»¶è¡¥å…¨å¤±è´¥", InfoBarSeverity.Error);
             }
         }//MainWindow.ShowInfoBarAsync
 
@@ -86,23 +86,23 @@ namespace WonderLab.Views
                 try
                 {
                     GameProcess.Kill();
-                    main.Description = "ÓÎÏ·½ø³ÌÒÑÍË³ö";
+                    main.Description = "æ¸¸æˆè¿›ç¨‹å·²é€€å‡º";
                     gameout.IsVisible = true;
                     IsKill = true;
-                    MainWindow.ShowInfoBarAsync("³É¹¦", "ÓÎÏ·½ø³Ì³É¹¦±»¹Ø±Õ£¡", FluentAvalonia.UI.Controls.InfoBarSeverity.Success);
+                    MainWindow.ShowInfoBarAsync("æˆåŠŸ", "æ¸¸æˆè¿›ç¨‹æˆåŠŸè¢«å…³é—­ï¼", FluentAvalonia.UI.Controls.InfoBarSeverity.Success);
                     Close.IsVisible = false;
                 }
                 catch (InvalidOperationException)
                 {
-                    MainWindow.ShowInfoBarAsync("´íÎó", "ÓÎÏ·½ø³ÌÒÑ¾­±»¹Ø±Õ»ò±ÀÀ£", FluentAvalonia.UI.Controls.InfoBarSeverity.Warning);
+                    MainWindow.ShowInfoBarAsync("é”™è¯¯", "æ¸¸æˆè¿›ç¨‹å·²ç»è¢«å…³é—­æˆ–å´©æºƒ", FluentAvalonia.UI.Controls.InfoBarSeverity.Warning);
                 }
             }
             else
-                MainWindow.ShowInfoBarAsync("×÷Éõ", "ÓÎÏ·¶¼Ã»¿ª¾ÍÏë¹Ø£¬¸é×Å¸øÎÒ¸é×ÅÄØ", FluentAvalonia.UI.Controls.InfoBarSeverity.Warning);
+                MainWindow.ShowInfoBarAsync("ä½œç”š", "æ¸¸æˆéƒ½æ²¡å¼€å°±æƒ³å…³ï¼Œæç€ç»™æˆ‘æç€å‘¢", FluentAvalonia.UI.Controls.InfoBarSeverity.Warning);
         }
 
         /// <summary>
-        /// ¼ì²âÓÎÏ·ÎÄ¼şÊÇ·ñÈ±Ê§
+        /// æ£€æµ‹æ¸¸æˆæ–‡ä»¶æ˜¯å¦ç¼ºå¤±
         /// </summary>
         /// <returns></returns>
         public async Task<(bool,string)> CheckFileAsync(string version,string i = "")
@@ -120,7 +120,7 @@ namespace WonderLab.Views
                     {
                         await Dispatcher.UIThread.InvokeAsync(() =>
                         {
-                            main.Description = "×ÊÔ´²¹È«½ø¶È£º" + e;
+                            main.Description = "èµ„æºè¡¥å…¨è¿›åº¦ï¼š" + e;
                         }, DispatcherPriority.Background);
                     });
                     refs.Item1 = true;
@@ -130,9 +130,9 @@ namespace WonderLab.Views
                 {
                     gameout.IsVisible = true;
                     Close.IsVisible = false;
-                    MainWindow.ShowInfoBarAsync("´íÎó", "ÎÄ¼ş²¹È«Ê§°Ü£¬¿ÉÄÜÊÇºËĞÄ²»´æÔÚµ¼ÖÂµÄ£¡", InfoBarSeverity.Error);
+                    MainWindow.ShowInfoBarAsync("é”™è¯¯", "æ–‡ä»¶è¡¥å…¨å¤±è´¥ï¼Œå¯èƒ½æ˜¯æ ¸å¿ƒä¸å­˜åœ¨å¯¼è‡´çš„ï¼", InfoBarSeverity.Error);
                     refs.Item1 = false;
-                    refs.Item2 = "Òì³£";
+                    refs.Item2 = "å¼‚å¸¸";
                 }
                 return refs;
             }
@@ -152,8 +152,8 @@ namespace WonderLab.Views
 
             backgroundWorker.DoWork += async (_, _) =>
             {
-                settings = new LaunchConfig(); // ³õÊ¼»¯Æô¶¯ÅäÖÃ
-                #region ×ÛºÏÉèÖÃ
+                settings = new LaunchConfig(); // åˆå§‹åŒ–å¯åŠ¨é…ç½®
+                #region ç»¼åˆè®¾ç½®
                 var locator = new GameCoreToolkit(Path is "" ? App.Data.FooterPath : Path);
                 var res = JsonToolkit.GetEnableIndependencyCoreData(App.Data.FooterPath,locator.GetGameCore(version).ToNatsurainkoGameCore());
                 settings.JvmConfig = new(App.Data.JavaPath)
@@ -173,7 +173,7 @@ namespace WonderLab.Views
                     settings.WorkingFolder = new(Path is "" ? App.Data.FooterPath : Path);
                 Debug.WriteLine(settings.WorkingFolder);
                 IsEnableIndependencyCore = App.Data.Isolate;
-                //Èç¹û²»ÊÇwindows¾Í¿ÉÒÔÊÖ¶¯ÉèÖÃNativesÄ¿Â¼
+                //å¦‚æœä¸æ˜¯windowså°±å¯ä»¥æ‰‹åŠ¨è®¾ç½®Nativesç›®å½•
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX) || RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
                     settings.NativesFolder = new(Path is "" ? App.Data.FooterPath : Path);
                 if (res is not null && res.IsEnableIndependencyCore)
@@ -192,7 +192,7 @@ namespace WonderLab.Views
                         Height = res.WindowHeight,
                         Width = res.WindowWidth
                     };
-                    Trace.WriteLine("[Launch] ÒÑÆôÓÃ¶ÀÁ¢ÓÎÏ·ºËĞÄÉèÖÃ");
+                    Trace.WriteLine("[Launch] å·²å¯ç”¨ç‹¬ç«‹æ¸¸æˆæ ¸å¿ƒè®¾ç½®");
                     //if (res.Isolate is true)
                     //    settings.WorkingFolder = new(PathConst.GetVersionFolder(Path is "" ? App.Data.FooterPath : Path, version));
                     //else
@@ -200,8 +200,8 @@ namespace WonderLab.Views
                 }
                 #endregion
 
-                #region ÕË»§ÉèÖÃ
-                if (userData.UserType is "Î¢ÈíÕË»§")
+                #region è´¦æˆ·è®¾ç½®
+                if (userData.UserType is "å¾®è½¯è´¦æˆ·")
                 {
                     settings.Account = new MicrosoftAccount()
                     {
@@ -211,7 +211,7 @@ namespace WonderLab.Views
                         RefreshToken = userData.UserRefreshToken,
                     };
                 }
-                else if (userData.UserType is "ÀëÏßÕË»§")
+                else if (userData.UserType is "ç¦»çº¿è´¦æˆ·")
                 {
                     settings.Account = new OfflineAccount()
                     {
@@ -238,7 +238,7 @@ namespace WonderLab.Views
                 }
                 #endregion
 
-                #region Æô¶¯
+                #region å¯åŠ¨
                 bool IsCanel = false;
                 GameId = version;
                 var launcher = new JavaClientLauncher(settings, locator, IsEnableIndependencyCore);
@@ -246,17 +246,17 @@ namespace WonderLab.Views
                 LaunchResponse = response;
                 response.ProcessOutput += Response_MinecraftProcessOutput;
                 response.Exited += Response_MinecraftExited;
-                if (response.State is MinecraftLaunch.Modules.Enum.LaunchState.Succeess) // ÅĞ¶ÏÆô¶¯×´Ì¬ÊÇ·ñ³É¹¦
+                if (response.State is MinecraftLaunch.Modules.Enum.LaunchState.Succeess) // åˆ¤æ–­å¯åŠ¨çŠ¶æ€æ˜¯å¦æˆåŠŸ
                 {
-                    #region ¼ÇÂ¼Ê±¼ä
+                    #region è®°å½•æ—¶é—´
                     var core = new GameCoreToolkit(App.Data.FooterPath).GetGameCore(version);
                     JsonToolkit.ChangeEnableIndependencyCoreInfoJsonTime(App.Data.FooterPath, core.ToNatsurainkoGameCore(), JsonToolkit.GetEnableIndependencyCoreData(App.Data.FooterPath, core.ToNatsurainkoGameCore()));
                     #endregion
-                    await Dispatcher.UIThread.InvokeAsync(() => main.Description = "µÈ´ıÓÎÏ·´°¿Ú³öÏÖ", DispatcherPriority.Background);
+                    await Dispatcher.UIThread.InvokeAsync(() => main.Description = "ç­‰å¾…æ¸¸æˆçª—å£å‡ºç°", DispatcherPriority.Background);
                     await Task.Run(response.Process.WaitForInputIdle);
                     await Dispatcher.UIThread.InvokeAsync(() =>
                     {
-                        main.Description = "ÓÎÏ·ÔËĞĞÖĞ";
+                        main.Description = "æ¸¸æˆè¿è¡Œä¸­";
                     }, DispatcherPriority.Background);
                     GameProcess = response.Process;
                     MainView.ViewModel.AllTaskCount--;
@@ -292,21 +292,21 @@ namespace WonderLab.Views
             {
                 if (!e.Crashed || IsKill || (Window is not null && Window.IsKill))
                 {
-                    main.Description = $"ÓÎÏ·½ø³ÌÒÑÍË³ö";
+                    main.Description = $"æ¸¸æˆè¿›ç¨‹å·²é€€å‡º";
                     Close.IsVisible = false;
                     gameout.IsVisible = true;
-                    exitcode.Text = $"ÍË³öÂë£º{e.ExitCode}";
+                    exitcode.Text = $"é€€å‡ºç ï¼š{e.ExitCode}";
                 }
                 else
                 {
-                    main.Description = $"ÓÎÏ·½ø³ÌÒÑÍË³ö";
+                    main.Description = $"æ¸¸æˆè¿›ç¨‹å·²é€€å‡º";
                     Close.IsVisible = false;
                     gameout.IsVisible = true;
-                    exitcode.Text = $"ÍË³öÂë£º{e.ExitCode}";
+                    exitcode.Text = $"é€€å‡ºç ï¼š{e.ExitCode}";
                     GameCrashAnalyzer analyzer = new(Logs);
                     IsKill = false;
                     var res = analyzer.AnalyseAsync().Keys.ToList();
-                    Debug.WriteLine($"[Launch] µ¼ÖÂÓÎÏ·±ÀÀ£µÄ¿ÉÄÜµÄÒì³£ÓĞ {res.Count} ¸ö");
+                    Debug.WriteLine($"[Launch] å¯¼è‡´æ¸¸æˆå´©æºƒçš„å¯èƒ½çš„å¼‚å¸¸æœ‰ {res.Count} ä¸ª");
                     Debug.WriteLine($"[Launch] {string.Join("\n", res)}");
                 }
             });

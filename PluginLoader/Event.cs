@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 namespace PluginLoader
 {
     /// <summary>
@@ -78,4 +78,5 @@ namespace PluginLoader
             @event.Do();
         }
     }
+}
 }

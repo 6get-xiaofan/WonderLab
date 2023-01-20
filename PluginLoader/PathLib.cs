@@ -1,4 +1,4 @@
-﻿namespace PathLib
+namespace PathLib
 {
     public static class PathLib
     {
@@ -14,4 +14,5 @@
             return Path.Combine(mainPath, subPath); 
         }
     }
+}
 }

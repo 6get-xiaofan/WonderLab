@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using FluentAvalonia.UI.Controls;
 using FluentAvalonia.UI.Media.Animation;
 using MinecraftLaunch.Modules.Models.Launch;
@@ -375,4 +375,5 @@ namespace WonderLab.ViewModels
         public string _GameCoresFilter = string.Empty;
         public List<string> _FodlerList = App.Data.GameFooterList;
     }
+}
 }

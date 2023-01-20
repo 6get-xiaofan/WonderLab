@@ -1,4 +1,4 @@
-﻿using Avalonia.Media.Imaging;
+using Avalonia.Media.Imaging;
 using Avalonia.Threading;
 using MinecraftLaunch.Modules.Models.Download;
 using Natsurainko.Toolkits.Network;
@@ -178,4 +178,5 @@ namespace WonderLab.Modules.Models
             //}, default);
         }
     }
+}
 }

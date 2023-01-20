@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -282,4 +282,5 @@ namespace WonderLab.Modules.Toolkits
         public Textures textures { get; set; }
     }
 
+}
 }

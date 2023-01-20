@@ -1,4 +1,4 @@
-﻿using Avalonia;
+using Avalonia;
 using Avalonia.Data.Converters;
 using Avalonia.Platform;
 using System;
@@ -36,4 +36,5 @@ namespace WonderLab.Views.Converters
         public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture) =>
             throw new NotImplementedException();
     }
+}
 }

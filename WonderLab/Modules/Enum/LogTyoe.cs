@@ -1,4 +1,4 @@
-﻿using DynamicData.Kernel;
+using DynamicData.Kernel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,4 +13,5 @@ namespace WonderLab.Modules.Enum
         Info,
         Warning,
     }
+}
 }

@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic;
 using MinecraftLaunch.Modules.Models.Launch;
 using System;
 using System.Collections.Generic;
@@ -268,4 +268,5 @@ namespace WonderLab.Modules.Toolkits
             return Strings.Mid(FilePath, 0);
         }
     }
+}
 }

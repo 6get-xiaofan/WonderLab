@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Avalonia;
 using Avalonia.Animation;
 using Avalonia.Controls;
@@ -89,4 +89,5 @@ namespace ControlX.Styles.Controls
             rotator._loop.Add(rotator._loopTask);
         }
     }
+}
 }

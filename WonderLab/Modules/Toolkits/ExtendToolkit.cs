@@ -1,4 +1,4 @@
-﻿using MinecraftLaunch.Modules.Models.Install;
+using MinecraftLaunch.Modules.Models.Install;
 using MinecraftLaunch.Modules.Models.Launch;
 using Natsurainko.FluentCore.Class.Model.Launch;
 using Natsurainko.FluentCore.Module.Launcher;
@@ -86,4 +86,5 @@ namespace WonderLab.Modules.Toolkits
             return type;
         }
     }
+}
 }

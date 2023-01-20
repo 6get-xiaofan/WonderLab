@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using Avalonia.Threading;
 using FluentAvalonia.UI.Controls;
 using JetBrains.Annotations;
@@ -647,4 +647,5 @@ namespace WonderLab.ViewModels
         public bool _IsFileOpenVisible = false;
         public bool _IsLoadOk = true;
     }
+}
 }

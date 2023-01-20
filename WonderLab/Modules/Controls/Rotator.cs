@@ -1,4 +1,4 @@
-﻿using Avalonia.Animation;
+using Avalonia.Animation;
 using Avalonia.Controls;
 using Avalonia.Media;
 using Avalonia.Rendering;
@@ -91,4 +91,5 @@ namespace WonderLab.Modules.Controls
             rotator._loop.Add(rotator._loopTask);
         }
     }
+}
 }

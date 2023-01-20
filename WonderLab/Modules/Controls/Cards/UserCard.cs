@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using Avalonia;
 using Avalonia.Controls.Primitives;
 using System;
@@ -174,4 +174,5 @@ namespace WonderLab.Modules.Cards
         private Border _layoutRoot;
 
     }
+}
 }

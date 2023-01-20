@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using Avalonia.Data;
 using Avalonia.Media;
 using Avalonia.Threading;
@@ -120,4 +120,5 @@ namespace WonderLab.Modules.Controls
             return StreamGeometry.Parse(result);
         }
     }
+}
 }

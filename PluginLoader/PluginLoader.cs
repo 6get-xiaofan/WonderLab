@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Resources;
 using static PathLib.PathLib;
 namespace PluginLoader
@@ -370,4 +370,5 @@ namespace PluginLoader
             }
         }
     }
+}
 }

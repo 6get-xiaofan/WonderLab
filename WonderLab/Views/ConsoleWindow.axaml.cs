@@ -28,7 +28,7 @@ namespace WonderLab.Views
         public ConsoleWindow(JavaClientLaunchResponse lr,string gameId)
         {
             InitializeComponent();
-            Title = $"游戏实时日志输出窗口 - {gameId}";
+            Title = $"娓告垙瀹炴椂鏃ュ織杈撳嚭绐楀彛 - {gameId}";
             //ViewModel = new(lr);            
             CloseButton.Click += CloseButton_Click;
             ViewModel = new ConsoleWindowViewModel(lr);

@@ -1,4 +1,4 @@
-﻿using Avalonia.Controls;
+using Avalonia.Controls;
 using FluentAvalonia.UI.Controls;
 using Natsurainko.Toolkits.Network.Model;
 using System;
@@ -82,4 +82,5 @@ namespace WonderLab.Modules.Toolkits
             control.IsEnabled = true;
         }
     }
+}
 }

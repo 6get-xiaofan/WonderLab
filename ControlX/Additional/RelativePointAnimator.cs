@@ -1,4 +1,4 @@
-﻿using Avalonia;
+using Avalonia;
 using Avalonia.Animation.Animators;
 
 namespace ControlX.Styles.Additional {
@@ -10,4 +10,5 @@ namespace ControlX.Styles.Additional {
                 newValue.Unit);
         }
     }
+}
 }

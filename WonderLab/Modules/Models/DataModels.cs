@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -31,4 +31,5 @@ namespace WonderLab.Modules.Models
         public List<string> GameFooterList { get; set; } = new();
         public List<UserDataModels> UserList { get; set; } = new();
     }    
+}
 }

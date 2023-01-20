@@ -61,7 +61,7 @@ namespace WonderLab.Views
             if (ViewModel.CurrentGameCore is not null)
                 await ChangeNameDialog.ShowAsync();
             else
-                MainWindow.ShowInfoBarAsync("ÌáÊ¾£º","Î´Ñ¡ÔñÈÎºÎÓÎÏ·ºËĞÄ£¡", InfoBarSeverity.Error);
+                MainWindow.ShowInfoBarAsync("æç¤ºï¼š","æœªé€‰æ‹©ä»»ä½•æ¸¸æˆæ ¸å¿ƒï¼", InfoBarSeverity.Error);
         }
 
         private void CancelButtonClick(object? sender, Avalonia.Interactivity.RoutedEventArgs e)

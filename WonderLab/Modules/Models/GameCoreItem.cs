@@ -1,4 +1,4 @@
-﻿using MinecraftLaunch.Modules.Models.Install;
+using MinecraftLaunch.Modules.Models.Install;
 using MinecraftLaunch.Modules.Models.Launch;
 using Natsurainko.FluentCore.Class.Model.Install.Vanilla;
 using Newtonsoft.Json;
@@ -38,4 +38,5 @@ namespace WonderLab.Modules.Models
             Url = this.Url
         };
     }
+}
 }

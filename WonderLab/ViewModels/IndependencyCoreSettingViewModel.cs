@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -111,4 +111,5 @@ namespace WonderLab.ViewModels
         public bool _IsFullWindow = false;
         public bool _IsOlate = false;
     }
+}
 }

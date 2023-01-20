@@ -1,4 +1,4 @@
-﻿using Avalonia.Threading;
+using Avalonia.Threading;
 using MinecraftLaunch.Modules.Models.Download;
 using MinecraftLaunch.Modules.Models.Launch;
 using MinecraftLaunch.Modules.Toolkits;
@@ -90,4 +90,5 @@ namespace WonderLab.ViewModels
         public bool _Isolate = false;
         public ModPackToolkit Toolkit;
     }
+}
 }

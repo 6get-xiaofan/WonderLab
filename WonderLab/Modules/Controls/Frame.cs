@@ -1,4 +1,4 @@
-﻿using Avalonia.Collections;
+using Avalonia.Collections;
 using Avalonia.Controls.Presenters;
 using Avalonia.Controls.Primitives;
 using Avalonia.Controls;
@@ -39,4 +39,5 @@ namespace WonderLab.Modules.Controls
             return v;
         }
     }
+}
 }

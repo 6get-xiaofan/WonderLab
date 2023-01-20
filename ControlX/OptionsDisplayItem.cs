@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Avalonia;
@@ -148,9 +148,15 @@ public class OptionsDisplayItem : Expander
         base.OnApplyTemplate(e);
 
         _layoutRoot = e.NameScope.Find<Border>("LayoutRoot");
+#pragma warning disable CS8622 // 参数类型中引用类型的为 Null 性与目标委托不匹配(可能是由于为 Null 性特性)。
         _layoutRoot.PointerPressed += OnLayoutRootPointerPressed;
+#pragma warning restore CS8622 // 参数类型中引用类型的为 Null 性与目标委托不匹配(可能是由于为 Null 性特性)。
+#pragma warning disable CS8622 // 参数类型中引用类型的为 Null 性与目标委托不匹配(可能是由于为 Null 性特性)。
         _layoutRoot.PointerReleased += OnLayoutRootPointerReleased;
+#pragma warning restore CS8622 // 参数类型中引用类型的为 Null 性与目标委托不匹配(可能是由于为 Null 性特性)。
+#pragma warning disable CS8622 // 参数类型中引用类型的为 Null 性与目标委托不匹配(可能是由于为 Null 性特性)。
         _layoutRoot.PointerCaptureLost += OnLayoutRootPointerCaptureLost;
+#pragma warning restore CS8622 // 参数类型中引用类型的为 Null 性与目标委托不匹配(可能是由于为 Null 性特性)。
     }
 
     private void OnLayoutRootPointerPressed(object sender, PointerPressedEventArgs e)
@@ -190,5 +196,8 @@ public class OptionsDisplayItem : Expander
 
     private bool _isPressed;
     private bool _isExpanded;
+#pragma warning disable CS8618 // 在退出构造函数时，不可为 null 的字段必须包含非 null 值。请考虑声明为可以为 null。
     private Border _layoutRoot;
+#pragma warning restore CS8618 // 在退出构造函数时，不可为 null 的字段必须包含非 null 值。请考虑声明为可以为 null。
+}
 }

@@ -1,4 +1,4 @@
-﻿using MinecraftLaunch.Modules.Models.Launch;
+using MinecraftLaunch.Modules.Models.Launch;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,4 +16,5 @@ namespace WonderLab.Modules.Models
 
         public DateTime LastLaunchTime { get; set; }
     }
+}
 }

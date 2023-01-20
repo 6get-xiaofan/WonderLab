@@ -1,4 +1,4 @@
-﻿using Avalonia.Threading;
+using Avalonia.Threading;
 using FluentAvalonia.UI.Controls;
 using FluentAvalonia.UI.Media.Animation;
 using JetBrains.Annotations;
@@ -586,4 +586,5 @@ namespace WonderLab.ViewModels
             return Data.Version;
         }
     }
+}
 }

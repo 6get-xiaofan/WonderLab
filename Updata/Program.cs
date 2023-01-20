@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using System.IO.Compression;
 
 namespace Updataer
@@ -130,4 +130,5 @@ namespace Updataer
             }
         }
     }
+}
 }

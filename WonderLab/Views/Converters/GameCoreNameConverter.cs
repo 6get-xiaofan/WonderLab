@@ -1,4 +1,4 @@
-﻿using Avalonia.Data.Converters;
+using Avalonia.Data.Converters;
 using MinecraftLaunch.Modules.Models.Launch;
 using System;
 using System.Collections.Generic;
@@ -30,4 +30,5 @@ namespace WonderLab.Views.Converters
         public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture) =>
             throw new();
     }
+}
 }
