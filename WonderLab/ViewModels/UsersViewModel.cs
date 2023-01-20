@@ -189,6 +189,7 @@ namespace WonderLab.ViewModels
         public void GetSaveUserInfo()
         {
             Users = new(App.Data.UserList.Select(x => new UserModels(x)));
+            JsonToolkit.JsonWrite();
             //CurrentUser = Users.GetUserInIndex(App.Data.SelectedUser.UserName);
         }
 

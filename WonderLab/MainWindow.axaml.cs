@@ -289,7 +289,7 @@ namespace WonderLab
                     width = 400;
                 }
             }
-            //AutoUpdata();
+            AutoUpdata();
         }
 
         private void OnRequestedThemeChanged(FluentAvaloniaTheme sender, RequestedThemeChangedEventArgs args)
@@ -375,7 +375,6 @@ namespace WonderLab
 
         public void InitializeComponent()
         {
-            AutoUpdata();
             InitializeComponent(true);
             TipClose();
             BarHost.Attach(this);

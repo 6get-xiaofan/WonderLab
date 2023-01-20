@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using WonderLab.Modules.Base;
+using WonderLab.Modules.Toolkits;
 
 namespace WonderLab.ViewModels
 {
@@ -146,6 +147,7 @@ namespace WonderLab.ViewModels
                     CurrentGameFolder = result;
                     GameRemoveVisible = true;
                 }
+                JsonToolkit.JsonWrite();
             }
             catch (Exception ex)
             {
@@ -179,6 +181,7 @@ namespace WonderLab.ViewModels
                     Javas = App.Data.JavaList;
                     CurrentJava = result[0];
                 }
+                JsonToolkit.JsonWrite();
             }
             catch (Exception ex)
             {
@@ -213,6 +216,7 @@ namespace WonderLab.ViewModels
                         JavaRemoveVisible = true;
                         CurrentJava = Javas[0];
                         MainWindow.ShowInfoBarAsync("成功", "已将搜索到的Java加入至列表", FluentAvalonia.UI.Controls.InfoBarSeverity.Success);
+                        JsonToolkit.JsonWrite();
                     }
                 }
                 catch (Exception ex)
