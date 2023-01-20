@@ -1,6 +1,6 @@
 ﻿using System.Net;
 using System.Text;
-
+#pragma warning disable CS8618 // 在退出构造函数时，不可为 null 的字段必须包含非 null 值。请考虑声明为可以为 null。
 namespace GithubLib
 {
     public class GithubLib
@@ -108,7 +108,7 @@ namespace GithubLib
                 HttpWebResponse response = (HttpWebResponse)wr;
                 StreamReader reader = new StreamReader(response.GetResponseStream(), Encoding.UTF8);
                 string content = reader.ReadToEnd();
-                Issue[] issues = Newtonsoft.Json.JsonConvert.DeserializeObject<Issue[]>(content);
+                Issue[]? issues = Newtonsoft.Json.JsonConvert.DeserializeObject<Issue[]>(content);
                 return issues;
             }
         }
@@ -136,64 +136,65 @@ namespace GithubLib
     }
     public class Release
     {
-        public string? url;
-        public string? assets_url;
-        public string? upload_url;
-        public string? html_url;
-        public long? id;
-        public User? author;
-        public string? node_id;
-        public string? tag_name;
+
+        public string url;
+        public string assets_url;
+        public string upload_url;
+        public string html_url;
+        public long id;
+        public User author;
+        public string node_id;
+        public string tag_name;
         public string? target_commitish;
-        public string? name;
-        public bool? draft;
-        public bool? prerelease;
-        public string? created_at;
-        public string? published_at;
-        public List<Asset>? assets;
+        public string name;
+        public bool draft;
+        public bool prerelease;
+        public string created_at;
+        public string published_at;
+        public List<Asset> assets;
         public string? tarball_url;
         public string? zipball_url;
         public string? body;
     }
     public class Asset
     {
-        public string? url;
-        public long? id;
-        public string? node_id;
-        public string? name;
+        public string url;
+        public long id;
+        public string node_id;
+        public string name;
         public string? label;
-        public User? uploader;
+        public User uploader;
         public string? content_type;
         public string? state;
-        public long? size;
-        public int? download_count;
-        public string? created_at;
-        public string? updated_at;
-        public string? browser_download_url;
+        public long size;
+        public int download_count;
+        public string created_at;
+        public string updated_at;
+        public string browser_download_url;
 
     }
     public class Issue
     {
-        public string? url;
-        public string? repository_url;
+        public string url;
+        public string repository_url;
         public string? labels_url;
         public string? comments_url;
         public string? events_url;
-        public string? html_url;
-        public long? id;
-        public string? node_id;
-        public int? number;
-        public string? title;
-        public User? user;
+        public string html_url;
+        public long id;
+        public string node_id;
+        public int number;
+        public string title;
+        public User user;
         public IssueLabel[]? labels;
-        public string? state;
-        public bool? locked;
+        public string state;
+        public bool locked;
         public User[]? assignee;
         public string? milestone;
         public int? comments;
-        public string? created_at;
-        public string? updated_at;
-        public string? closed_at;
+        public string created_at;
+        public string updated_at;
+        public string closed_at;
         public string? author_association;
         public string? active_lock_reason;
         public string? body;
@@ -205,17 +206,17 @@ namespace GithubLib
     }
     public class IssueLabel
     {
-        public long? id;
-        public string? node_id;
-        public string? url;
-        public string? name;
-        public string? color;
-        public string? description;
-        public bool? @default;
+        public long id;
+        public string node_id;
+        public string url;
+        public string name;
+        public string color;
+        public string description;
+        public bool @default;
     }
     public class Reactions
     {
-        public string? url;
+        public string url;
         public int? total_count;
         public int? laugh;
         public int? hooray;
@@ -226,3 +227,4 @@ namespace GithubLib
 
     }
 }
+#pragma warning restore CS8618 // 在退出构造函数时，不可为 null 的字段必须包含非 null 值。请考虑声明为可以为 null。

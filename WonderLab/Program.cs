@@ -5,6 +5,7 @@ using GithubLib;
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace WonderLab
@@ -17,13 +18,16 @@ namespace WonderLab
         [STAThread]
         public static void Main(string[] args)
         {
-            //if(File.Exists(Path.Combine("updata-cache", "UpdataNextTime")))
-            //{
-            //    Process pro = new Process();
-            //    pro.StartInfo.FileName = "Updata.exe";
-            //    pro.Start();
-            //    return;
-            //}
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                if (File.Exists(Path.Combine("updata-cache", "UpdataNextTime")))
+                {
+                    Process pro = new Process();
+                    pro.StartInfo.FileName = "Updata.exe";
+                    pro.Start();
+                    return;
+                }
+            }
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             BuildAvaloniaApp()
             .StartWithClassicDesktopLifetime(args);

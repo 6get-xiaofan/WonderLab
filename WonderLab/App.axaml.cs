@@ -58,7 +58,9 @@ namespace WonderLab
                 {
                     //resm:WonderLab.Resources.WonderLab.Desktop.exe
                     var al = AvaloniaLocator.Current.GetService<IAssetLoader>();
+#pragma warning disable CS8602 // 解引用可能出现空引用。
                     using var s = al.Open(new Uri("resm:WonderLab.Resources.WonderLab.Desktop.exe"));
+#pragma warning restore CS8602 // 解引用可能出现空引用。
                     using FileStream fileStream = File.Create(PathConst.DownloaderPath);
                     byte[] bytes = new byte[HttpToolkit.BufferSize];
                     for (int num = await s.ReadAsync(bytes, 0, HttpToolkit.BufferSize); num > 0; num = await s.ReadAsync(bytes, 0, HttpToolkit.BufferSize))
@@ -106,18 +108,28 @@ namespace WonderLab
             var al = AvaloniaLocator.Current.GetService<IAssetLoader>();
             await Task.Run(() =>
             {
+#pragma warning disable CS8602 // 解引用可能出现空引用。
                 using var s = al.Open(new Uri("resm:WonderLab.Resources.ModData.json"));
+#pragma warning restore CS8602 // 解引用可能出现空引用。
                 StreamReader stream = new(s);
                 var model = JsonConvert.DeserializeObject<List<ModLangDataModel>>(stream.ReadToEnd());
-                model.ForEach(x => InfoConst.ModLangDatas.Add(x.CurseForgeId, x));
-
-                InfoConst.ModLangDatas.Values.ToList().ForEach(x =>
+                if (model != null)
                 {
-                    if (x.Chinese.Contains("*"))
-                        x.Chinese = x.Chinese.Replace("*",
-                            " (" + string.Join(" ", x.CurseForgeId.Split("-").Select(w => w.Substring(0, 1).ToUpper() + w.Substring(1, w.Length - 1))) + ")");
-                });
-            });
+                    if(InfoConst.ModLangDatas == null)
+                    {
+                        InfoConst.ModLangDatas = new();
+                    }
+                    model.ForEach(x => InfoConst.ModLangDatas.Add(x.CurseForgeId, x));
+
+                    InfoConst.ModLangDatas.Values.ToList().ForEach(x =>
+                    {
+                        if (x.Chinese.Contains("*"))
+                            x.Chinese = x.Chinese.Replace("*",
+                                " (" + string.Join(" ", x.CurseForgeId.Split("-").Select(w => w.Substring(0, 1).ToUpper() + w.Substring(1, w.Length - 1))) + ")");
+                    });
+                }
+            }
+                );
         }
         public override void Initialize()
         {
@@ -191,7 +203,7 @@ namespace WonderLab
 
         public IGlyphTypefaceImpl CreateGlyphTypeface(Typeface typeface)
         {
-            SKTypeface skTypeface = default;
+            SKTypeface? skTypeface = default;
             Trace.WriteLine(typeface.FontFamily.Name);
             switch (typeface.FontFamily.Name)
             {

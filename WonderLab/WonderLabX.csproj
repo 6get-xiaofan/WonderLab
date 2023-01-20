@@ -39,7 +39,6 @@
     <EmbeddedResource Include="Resources\forge.png" />
     <EmbeddedResource Include="Resources\HarmonyOS.ttf" />
     <EmbeddedResource Include="Resources\Icon.ico" />
-    <EmbeddedResource Include="Resources\ModData.json" />
 	<EmbeddedResource Include="Resources\normal.png" />
     <EmbeddedResource Include="Resources\sdf.png" />
     <EmbeddedResource Include="Resources\WonderLab.Desktop.exe" />
@@ -86,6 +85,9 @@
     <UpToDateCheckInput Remove="Views\PropertyView.axaml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\ModData.json" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="半圆.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -110,12 +112,10 @@
 	  <ProjectReference Include="..\ControlX\ControlX.csproj" />
 	  <ProjectReference Include="..\GithubLib\GithubLib.csproj" />
 	  <ProjectReference Include="..\PluginLoader\PluginLoader.csproj" />
-	  <ProjectReference Include="..\Updata\Updata.csproj" />
-	</ItemGroup>
-	<ItemGroup>
-	  <None Update="Updata.dll">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </None>
+	  <ProjectReference Include="..\Updata\Updata.csproj">
+	    <Private>True</Private>
+	    <CopyLocalSatelliteAssemblies>True</CopyLocalSatelliteAssemblies>
+	  </ProjectReference>
 	</ItemGroup>	
 	
 	<PropertyGroup>

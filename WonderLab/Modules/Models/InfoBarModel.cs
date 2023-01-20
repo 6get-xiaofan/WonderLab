@@ -18,7 +18,7 @@ namespace WonderLab.Modules.Models
 
         public string Description { get; set; } = string.Empty;
 
-        public IControl Button { get; set; }
+        public IControl? Button { get; set; }
 
         public int Delay { get; set; } = 5000;
 

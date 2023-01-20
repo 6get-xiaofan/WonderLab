@@ -28,7 +28,9 @@ using WonderLab.Views;
 using Brushes = Avalonia.Media.Brushes;
 using Color = Avalonia.Media.Color;
 using FluentAvalonia.UI.Media.Animation;
-
+using static WonderLab.ViewModels.OtherViewModel;
+using WonderLab.Modules.Controls;
+#pragma warning disable CS8618 // 在退出构造函数时，不可为 null 的字段必须包含非 null 值。请考虑声明为可以为 null。
 namespace WonderLab
 {
     public partial class MainWindow : Window
@@ -39,6 +41,7 @@ namespace WonderLab
         {
             if (!IsWindows11)
             {
+#pragma warning disable CS8602 // 解引用可能出现空引用。
                 if (AvaloniaLocator.Current.GetService<FluentAvaloniaTheme>().RequestedTheme is "Dark")
                 {
                     AcrylicBorder.Material = new ExperimentalAcrylicMaterial()
@@ -59,6 +62,7 @@ namespace WonderLab
                         MaterialOpacity = 0.65,
                     };
                 }
+#pragma warning restore CS8602 // 解引用可能出现空引用。
             }
         }
 
@@ -133,24 +137,33 @@ namespace WonderLab
         private void MainWindow_Closed(object? sender, System.EventArgs e) => JsonToolkit.JsonWrite();
         public static string GetVersion()
         {
-            return "1.0.1.0";
+            return "1.0.1.2";
         }
         public static void AutoUpdata()
         {
-            try{
+            try
+            {
                 string releaseUrl = GithubLib.GithubLib.GetRepoLatestReleaseUrl("Blessing-Studio", "WonderLab");
                 Release? release = GithubLib.GithubLib.GetRepoLatestRelease(releaseUrl);
                 if (release != null)
                 {
                     if (release.name != GetVersion())
                     {
-                        var button = new HyperlinkButton()
+                        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                         {
-                            Content = "点击下载",
-                        };
-                        button.Click += Button_Click;
-                        ShowInfoBarAsync("自动更新", "发现新版本" + release.name + "  当前版本" + GetVersion() + "  ", InfoBarSeverity.Informational, 7000, button);
+                            var button = new HyperlinkButton()
+                            {
+                                Content = "点击下载",
+                            };
+                            button.Click += Button_Click;
+                            ShowInfoBarAsync("自动更新", "发现新版本" + release.name + "  当前版本" + GetVersion() + "  ", InfoBarSeverity.Informational, 7000, button);
+                        }
+                        else
+                        {
+                            ShowInfoBarAsync("自动更新", "发现新版本" + release.name + "  当前版本" + GetVersion() + "  ", InfoBarSeverity.Informational, 7000);
+                        }
                     }
+
                 }
             }
             finally
@@ -161,13 +174,49 @@ namespace WonderLab
 
         public static void Button_Click(object? sender, RoutedEventArgs e)
         {
-            //CanUpdata = false;
-            //var res = Updata();
+            var res = Updata();
+            if (res != null)
+            {
+                DownloadUpdata(res);
+            }
         }
 
+        public static void DownloadUpdata(Release res)
+        {
+            var button = new HyperlinkButton()
+            {
+                Content = "转至 祝福终端>任务中心",
+            };
+            button.Click += (object? sender, RoutedEventArgs e) =>{ Page.NavigatedToTaskView(); };
+            MainWindow.ShowInfoBarAsync("提示：", $"开始下载更新  更新内容:\n {res.body} \n\n推送者{res.author.login} \n 可前往任务中心查看进度", InfoBarSeverity.Informational, 8000, button);
+            string save = @"updata.zip";
+            if(Directory.Exists("updata-cache"))
+            File.Delete(Path.Combine("updata-cache", save));
+            string url = "";
+            foreach (var asset in res.assets)
+            {
+                if (asset.name == "Results.zip")
+                {
+                    url = asset.browser_download_url;
+                }
+            }
+            HttpDownloadRequest httpDownload = new HttpDownloadRequest();
+            httpDownload.Url = url;
+            httpDownload.FileName = save;
+            httpDownload.Directory = new DirectoryInfo("updata-cache");
+            DownItemView downItemView = new DownItemView(httpDownload, $"更新  {res.name} 下载", new AfterDo(After_Do));
+            TaskView.Add(downItemView);
+        }
+        public static Release? Updata()
+        {
+            string releaseUrl = GithubLib.GithubLib.GetRepoLatestReleaseUrl("Blessing-Studio", "WonderLab");
+            Release? release = GithubLib.GithubLib.GetRepoLatestRelease(releaseUrl);
+            return release;
+        }
         private static void After_Do()
         {
             File.Create(Path.Combine("updata-cache", "UpdataNextTime")).Close();
+            MainWindow.ShowInfoBarAsync("提示：", $"更新下载完成  重启启动器以应用更新", InfoBarSeverity.Success, 20000);
         }
 
         public static void Button_Click1(object? sender, RoutedEventArgs e)
@@ -183,7 +232,9 @@ namespace WonderLab
             base.OnOpened(e);
 
             var thm = AvaloniaLocator.Current.GetService<FluentAvaloniaTheme>();
+#pragma warning disable CS8602 // 解引用可能出现空引用。
             thm.RequestedThemeChanged += OnRequestedThemeChanged;
+#pragma warning restore CS8602 // 解引用可能出现空引用。
 
             // Enable Mica on Windows 11
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
@@ -267,15 +318,19 @@ namespace WonderLab
         private void InfoBar_CloseButtonClick(InfoBar sender, object args)
         {
             var viewData = sender.DataContext as InfoBarModel;
-            viewData.Removed = true;
+            if (viewData != null)
+            {
+                viewData.Removed = true;
 
-            InfoBarItems.Remove(viewData);
-            InformationListBox.Items = null;
-            InformationListBox.Items = InfoBarItems;
+                InfoBarItems.Remove(viewData);
+                InformationListBox.Items = null;
+                InformationListBox.Items = InfoBarItems;
+            }
         }
         
         private void MainWindow_Deactivated(object? sender, EventArgs e)
         {
+#pragma warning disable CS8602 // 解引用可能出现空引用。
             AcrylicBorder.Material = new ExperimentalAcrylicMaterial()
             {
                 BackgroundSource = AcrylicBackgroundSource.Digger,
@@ -283,6 +338,7 @@ namespace WonderLab
                 TintOpacity = 1,
                 MaterialOpacity = 1,
             };
+#pragma warning restore CS8602 // 解引用可能出现空引用。
         }
 
         private void MainWindow_Activated(object? sender, EventArgs e)
@@ -325,6 +381,7 @@ namespace WonderLab
 
         public void InitializeComponent()
         {
+            AutoUpdata();
             InitializeComponent(true);
             TipClose();
             BarHost.Attach(this);
